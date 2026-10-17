@@ -1,0 +1,1165 @@
+{
+	"_comment": "The Exchange: townsfolk post bounties in the paper. Each request's 'per' is the vanilla villager trade range in items (or creatures) per emerald: [base, base with demand]. The rate used is drawn from that range, skewed towards the base by 'skew', so bounties pay at the generous end of vanilla prices; quantities are a week's worth. 'tier' is how far along a player must be: 0 starting out, 1 has found iron, 2 has been to the Nether, 3 has been to the End. 'pays' lists what a character may pay in besides emeralds, with each item's emerald value (vanilla selling prices). Names and towns come from names.json; 'id' picks the profession's name list. Each reader gets 'deliveries' notices from different trades and 'slayings' jobs for the Watch. A 'pays' item's 'stack' is how many fit in one stack when that isn't 64.",
+	"emeraldShare": 0.6,
+	"characters": [
+		{
+			"id": "farmer",
+			"role": "Farmer",
+			"requests": [
+				{
+					"item": "minecraft:wheat",
+					"min": 64,
+					"max": 256,
+					"tier": 0,
+					"note": "The harvest festival won't bake itself.",
+					"per": [
+						20.0,
+						26.0
+					]
+				},
+				{
+					"item": "minecraft:carrot",
+					"min": 64,
+					"max": 192,
+					"tier": 0,
+					"note": "The pigs have been asking, in their way.",
+					"per": [
+						22.22,
+						28.89
+					]
+				},
+				{
+					"item": "minecraft:potato",
+					"min": 64,
+					"max": 256,
+					"tier": 0,
+					"note": "For the winter stores.",
+					"per": [
+						25.0,
+						32.5
+					]
+				},
+				{
+					"item": "minecraft:beetroot",
+					"min": 48,
+					"max": 128,
+					"tier": 0,
+					"note": "Soup season is upon us.",
+					"per": [
+						14.93,
+						19.4
+					]
+				},
+				{
+					"item": "minecraft:pumpkin",
+					"min": 16,
+					"max": 48,
+					"tier": 0,
+					"note": "Pies for the whole village.",
+					"per": [
+						5.88,
+						7.65
+					]
+				},
+				{
+					"item": "minecraft:melon",
+					"min": 8,
+					"max": 32,
+					"tier": 0,
+					"note": "A hot week in the fields.",
+					"per": [
+						4.0,
+						5.2
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:bread",
+					"value": 0.17
+				},
+				{
+					"item": "minecraft:pumpkin_pie",
+					"value": 0.25
+				},
+				{
+					"item": "minecraft:golden_carrot",
+					"value": 0.33
+				}
+			]
+		},
+		{
+			"id": "mason",
+			"role": "Mason",
+			"requests": [
+				{
+					"item": "minecraft:clay_ball",
+					"min": 40,
+					"max": 160,
+					"tier": 0,
+					"note": "The new kiln is thirsty for clay.",
+					"per": [
+						10.0,
+						13.0
+					]
+				},
+				{
+					"item": "minecraft:stone",
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "The bridge needs patching. Again.",
+					"per": [
+						20.0,
+						26.0
+					]
+				},
+				{
+					"item": "minecraft:andesite",
+					"min": 64,
+					"max": 256,
+					"tier": 0,
+					"note": "For the new town hall steps.",
+					"per": [
+						16.0,
+						20.8
+					]
+				},
+				{
+					"item": "minecraft:granite",
+					"min": 64,
+					"max": 256,
+					"tier": 0,
+					"note": "A client with expensive taste.",
+					"per": [
+						16.0,
+						20.8
+					]
+				},
+				{
+					"item": "minecraft:quartz",
+					"min": 48,
+					"max": 144,
+					"tier": 2,
+					"note": "Only the finest for the chapel floor.",
+					"per": [
+						12.05,
+						15.66
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:bricks",
+					"value": 0.1
+				},
+				{
+					"item": "minecraft:polished_andesite",
+					"value": 0.25
+				}
+			]
+		},
+		{
+			"id": "fisherman",
+			"role": "Fisherman",
+			"requests": [
+				{
+					"item": "minecraft:string",
+					"min": 48,
+					"max": 160,
+					"tier": 0,
+					"note": "The nets have seen better days.",
+					"per": [
+						20.0,
+						26.0
+					]
+				},
+				{
+					"item": "minecraft:coal",
+					"min": 32,
+					"max": 96,
+					"tier": 0,
+					"note": "For the smokehouse.",
+					"per": [
+						10.0,
+						13.0
+					]
+				},
+				{
+					"item": "minecraft:cod",
+					"min": 32,
+					"max": 96,
+					"tier": 0,
+					"note": "Fish supper at the harbour.",
+					"per": [
+						14.93,
+						19.4
+					]
+				},
+				{
+					"item": "minecraft:salmon",
+					"min": 24,
+					"max": 80,
+					"tier": 0,
+					"note": "A wedding feast. Don't ask whose.",
+					"per": [
+						12.99,
+						16.88
+					]
+				},
+				{
+					"item": "minecraft:pufferfish",
+					"min": 8,
+					"max": 24,
+					"tier": 0,
+					"note": "For science. Probably.",
+					"per": [
+						4.0,
+						5.2
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:cooked_cod",
+					"value": 0.17
+				},
+				{
+					"item": "minecraft:campfire",
+					"value": 2
+				}
+			]
+		},
+		{
+			"id": "cleric",
+			"role": "Cleric",
+			"requests": [
+				{
+					"item": "minecraft:rotten_flesh",
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "We do not ask what we do with it.",
+					"per": [
+						32.26,
+						41.94
+					]
+				},
+				{
+					"item": "minecraft:gold_ingot",
+					"min": 3,
+					"max": 9,
+					"tier": 1,
+					"note": "To regild the bell tower.",
+					"per": [
+						3.03,
+						3.94
+					]
+				},
+				{
+					"item": "minecraft:glass_bottle",
+					"min": 32,
+					"max": 64,
+					"tier": 0,
+					"note": "The remedies need somewhere to go.",
+					"per": [
+						9.09,
+						11.82
+					]
+				},
+				{
+					"item": "minecraft:nether_wart",
+					"min": 64,
+					"max": 192,
+					"tier": 2,
+					"note": "For the brewing of tonics.",
+					"per": [
+						22.22,
+						28.89
+					]
+				},
+				{
+					"item": "minecraft:rabbit_foot",
+					"min": 1,
+					"max": 3,
+					"tier": 0,
+					"note": "Luck is in short supply.",
+					"per": [
+						2.0,
+						2.6
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:redstone",
+					"value": 0.25
+				},
+				{
+					"item": "minecraft:lapis_lazuli",
+					"value": 1
+				},
+				{
+					"item": "minecraft:experience_bottle",
+					"value": 1
+				},
+				{
+					"item": "minecraft:glowstone_dust",
+					"value": 0.25
+				}
+			]
+		},
+		{
+			"id": "librarian",
+			"role": "Librarian",
+			"requests": [
+				{
+					"item": "minecraft:paper",
+					"min": 96,
+					"max": 256,
+					"tier": 0,
+					"note": "The Herald itself is running low.",
+					"per": [
+						23.81,
+						30.95
+					]
+				},
+				{
+					"item": "minecraft:book",
+					"min": 16,
+					"max": 48,
+					"tier": 0,
+					"note": "The shelves look embarrassingly bare.",
+					"per": [
+						4.0,
+						5.2
+					]
+				},
+				{
+					"item": "minecraft:ink_sac",
+					"min": 20,
+					"max": 60,
+					"tier": 0,
+					"note": "We've written ourselves dry.",
+					"per": [
+						5.0,
+						6.5
+					]
+				},
+				{
+					"item": "minecraft:feather",
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Quills wear out faster than you'd think.",
+					"per": [
+						23.81,
+						30.95
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:bookshelf",
+					"value": 9
+				},
+				{
+					"item": "minecraft:lantern",
+					"value": 1
+				},
+				{
+					"item": "minecraft:glass",
+					"value": 0.25
+				},
+				{
+					"item": "minecraft:map",
+					"value": 7,
+					"stack": 1
+				}
+			]
+		},
+		{
+			"id": "armorer",
+			"role": "Armourer",
+			"requests": [
+				{
+					"item": "minecraft:coal",
+					"min": 60,
+					"max": 180,
+					"tier": 0,
+					"note": "The forge never sleeps.",
+					"per": [
+						14.93,
+						19.4
+					]
+				},
+				{
+					"item": "minecraft:iron_ingot",
+					"min": 16,
+					"max": 64,
+					"tier": 1,
+					"note": "Chainmail for the town watch.",
+					"per": [
+						4.0,
+						5.2
+					]
+				},
+				{
+					"item": "minecraft:lava_bucket",
+					"min": 1,
+					"max": 2,
+					"tier": 1,
+					"note": "Hotter. The forge must be hotter.",
+					"per": [
+						1.0,
+						1.3
+					]
+				},
+				{
+					"item": "minecraft:diamond",
+					"min": 1,
+					"max": 3,
+					"tier": 1,
+					"note": "A very special commission.",
+					"per": [
+						1.0,
+						1.3
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:iron_helmet",
+					"value": 5,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:shield",
+					"value": 5,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:chainmail_boots",
+					"value": 1,
+					"stack": 1
+				}
+			]
+		},
+		{
+			"id": "shepherd",
+			"role": "Shepherd",
+			"requests": [
+				{
+					"item": "minecraft:white_wool",
+					"min": 72,
+					"max": 216,
+					"tier": 0,
+					"note": "Blankets before the cold snap.",
+					"per": [
+						17.86,
+						23.21
+					]
+				},
+				{
+					"item": "minecraft:brown_dye",
+					"min": 48,
+					"max": 96,
+					"tier": 0,
+					"note": "A rug in a sensible colour.",
+					"per": [
+						12.05,
+						15.66
+					]
+				},
+				{
+					"item": "minecraft:yellow_dye",
+					"min": 48,
+					"max": 96,
+					"tier": 0,
+					"note": "Bunting for the fete.",
+					"per": [
+						12.05,
+						15.66
+					]
+				},
+				{
+					"item": "minecraft:red_dye",
+					"min": 48,
+					"max": 96,
+					"tier": 0,
+					"note": "The mayor wants a new cloak.",
+					"per": [
+						12.05,
+						15.66
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:shears",
+					"value": 2,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:white_bed",
+					"value": 3,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:painting",
+					"value": 2
+				}
+			]
+		},
+		{
+			"id": "fletcher",
+			"role": "Fletcher",
+			"requests": [
+				{
+					"item": "minecraft:stick",
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "Arrow shafts don't grow on trees. Well.",
+					"per": [
+						32.26,
+						41.94
+					]
+				},
+				{
+					"item": "minecraft:flint",
+					"min": 104,
+					"max": 208,
+					"tier": 0,
+					"note": "Arrowheads for the watch.",
+					"per": [
+						26.32,
+						34.21
+					]
+				},
+				{
+					"item": "minecraft:string",
+					"min": 56,
+					"max": 112,
+					"tier": 0,
+					"note": "Bowstrings snap. It's a fact of life.",
+					"per": [
+						14.08,
+						18.31
+					]
+				},
+				{
+					"item": "minecraft:feather",
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "Fletching for the archery contest.",
+					"per": [
+						23.81,
+						30.95
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:arrow",
+					"value": 0.0625
+				},
+				{
+					"item": "minecraft:bow",
+					"value": 2,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:crossbow",
+					"value": 3,
+					"stack": 1
+				}
+			]
+		},
+		{
+			"id": "leatherworker",
+			"role": "Leatherworker",
+			"requests": [
+				{
+					"item": "minecraft:leather",
+					"min": 24,
+					"max": 72,
+					"tier": 0,
+					"note": "Saddlebags for the post riders.",
+					"per": [
+						5.88,
+						7.65
+					]
+				},
+				{
+					"item": "minecraft:rabbit_hide",
+					"min": 36,
+					"max": 72,
+					"tier": 0,
+					"note": "Gloves for the winter.",
+					"per": [
+						9.09,
+						11.82
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:saddle",
+					"value": 6,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:leather_horse_armor",
+					"value": 6,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:bundle",
+					"value": 2,
+					"stack": 1
+				}
+			]
+		},
+		{
+			"id": "butcher",
+			"role": "Butcher",
+			"requests": [
+				{
+					"item": "minecraft:chicken",
+					"min": 28,
+					"max": 84,
+					"tier": 0,
+					"note": "Sunday roast for the whole street.",
+					"per": [
+						14.08,
+						18.31
+					]
+				},
+				{
+					"item": "minecraft:porkchop",
+					"min": 28,
+					"max": 56,
+					"tier": 0,
+					"note": "The inn has a big booking.",
+					"per": [
+						7.14,
+						9.29
+					]
+				},
+				{
+					"item": "minecraft:beef",
+					"min": 40,
+					"max": 80,
+					"tier": 0,
+					"note": "Stew for the miners.",
+					"per": [
+						10.0,
+						13.0
+					]
+				},
+				{
+					"item": "minecraft:sweet_berries",
+					"min": 40,
+					"max": 120,
+					"tier": 0,
+					"note": "For the jam competition.",
+					"per": [
+						10.0,
+						13.0
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:cooked_porkchop",
+					"value": 0.2
+				},
+				{
+					"item": "minecraft:rabbit_stew",
+					"value": 1,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:cooked_chicken",
+					"value": 0.125
+				}
+			]
+		},
+		{
+			"id": "cartographer",
+			"role": "Cartographer",
+			"requests": [
+				{
+					"item": "minecraft:paper",
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "The new survey needs a great many maps.",
+					"per": [
+						23.81,
+						30.95
+					]
+				},
+				{
+					"item": "minecraft:glass_pane",
+					"min": 44,
+					"max": 132,
+					"tier": 0,
+					"note": "Lenses for the observatory.",
+					"per": [
+						11.11,
+						14.44
+					]
+				},
+				{
+					"item": "minecraft:compass",
+					"min": 1,
+					"max": 2,
+					"tier": 1,
+					"note": "One for the apprentice, who keeps getting lost.",
+					"per": [
+						1.0,
+						1.3
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:map",
+					"value": 7,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:spyglass",
+					"value": 3,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:item_frame",
+					"value": 2
+				}
+			]
+		},
+		{
+			"id": "toolsmith",
+			"role": "Toolsmith",
+			"requests": [
+				{
+					"item": "minecraft:coal",
+					"min": 60,
+					"max": 120,
+					"tier": 0,
+					"note": "For tempering a new batch of tools.",
+					"per": [
+						14.93,
+						19.4
+					]
+				},
+				{
+					"item": "minecraft:iron_ingot",
+					"min": 16,
+					"max": 48,
+					"tier": 1,
+					"note": "The orders are piling up.",
+					"per": [
+						4.0,
+						5.2
+					]
+				},
+				{
+					"item": "minecraft:flint",
+					"min": 120,
+					"max": 240,
+					"tier": 0,
+					"note": "Flint and steel sells itself.",
+					"per": [
+						30.3,
+						39.39
+					]
+				},
+				{
+					"item": "minecraft:diamond",
+					"min": 1,
+					"max": 2,
+					"tier": 1,
+					"note": "A pickaxe for a very important customer.",
+					"per": [
+						1.0,
+						1.3
+					]
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:iron_pickaxe",
+					"value": 3,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:iron_axe",
+					"value": 3,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:iron_shovel",
+					"value": 2,
+					"stack": 1
+				}
+			]
+		},
+		{
+			"id": "forester",
+			"role": "Forester",
+			"requests": [
+				{
+					"item": "minecraft:oak_log",
+					"per": [
+						6.0,
+						8.0
+					],
+					"min": 32,
+					"max": 96,
+					"tier": 0,
+					"note": "The new mill won't saw itself."
+				},
+				{
+					"item": "minecraft:spruce_log",
+					"per": [
+						6.0,
+						8.0
+					],
+					"min": 32,
+					"max": 96,
+					"tier": 0,
+					"note": "Winter firewood, and plenty of it."
+				},
+				{
+					"item": "minecraft:birch_log",
+					"per": [
+						6.0,
+						8.0
+					],
+					"min": 24,
+					"max": 64,
+					"tier": 0,
+					"note": "Pale timber for the chapel pews."
+				},
+				{
+					"item": "minecraft:oak_sapling",
+					"per": [
+						4.0,
+						6.0
+					],
+					"min": 8,
+					"max": 24,
+					"tier": 0,
+					"note": "Every tree felled is a tree owed."
+				},
+				{
+					"item": "minecraft:dark_oak_log",
+					"per": [
+						5.0,
+						7.0
+					],
+					"min": 24,
+					"max": 64,
+					"tier": 0,
+					"note": "Dark wood for a very fancy door."
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:apple",
+					"value": 0.25
+				},
+				{
+					"item": "minecraft:iron_axe",
+					"value": 3,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:bone_meal",
+					"value": 0.1
+				}
+			]
+		},
+		{
+			"id": "baker",
+			"role": "Baker",
+			"requests": [
+				{
+					"item": "minecraft:wheat",
+					"per": [
+						20.0,
+						26.0
+					],
+					"min": 64,
+					"max": 192,
+					"tier": 0,
+					"note": "Flour doesn't grow on trees. It grows in fields."
+				},
+				{
+					"item": "minecraft:sugar_cane",
+					"per": [
+						16.0,
+						20.0
+					],
+					"min": 32,
+					"max": 96,
+					"tier": 0,
+					"note": "The cake orders have doubled."
+				},
+				{
+					"item": "minecraft:egg",
+					"per": [
+						16.0,
+						20.0
+					],
+					"min": 16,
+					"max": 48,
+					"tier": 0,
+					"note": "A wedding cake. Seven tiers."
+				},
+				{
+					"item": "minecraft:pumpkin",
+					"per": [
+						6.0,
+						8.0
+					],
+					"min": 12,
+					"max": 32,
+					"tier": 0,
+					"note": "Pie season waits for no one."
+				},
+				{
+					"item": "minecraft:cocoa_beans",
+					"per": [
+						10.0,
+						13.0
+					],
+					"min": 16,
+					"max": 48,
+					"tier": 0,
+					"note": "The biscuit tin is empty, and the town has noticed."
+				}
+			],
+			"pays": [
+				{
+					"item": "minecraft:bread",
+					"value": 0.17
+				},
+				{
+					"item": "minecraft:cake",
+					"value": 1,
+					"stack": 1
+				},
+				{
+					"item": "minecraft:cookie",
+					"value": 0.0625
+				},
+				{
+					"item": "minecraft:pumpkin_pie",
+					"value": 0.25
+				}
+			]
+		}
+	],
+	"watch": {
+		"id": "watch",
+		"bounties": [
+			{
+				"entity": "minecraft:zombie",
+				"min": 12,
+				"max": 30,
+				"tier": 0,
+				"note": "They keep trying the doors.",
+				"per": [
+					4.0,
+					5.2
+				]
+			},
+			{
+				"entity": "minecraft:skeleton",
+				"min": 10,
+				"max": 24,
+				"tier": 0,
+				"note": "Someone has to deal with the archers.",
+				"per": [
+					3.33,
+					4.33
+				]
+			},
+			{
+				"entity": "minecraft:spider",
+				"min": 10,
+				"max": 24,
+				"tier": 0,
+				"note": "The washing lines are full of webs.",
+				"per": [
+					4.0,
+					5.2
+				]
+			},
+			{
+				"entity": "minecraft:creeper",
+				"min": 6,
+				"max": 16,
+				"tier": 0,
+				"note": "The bakery has lost its third wall this month.",
+				"per": [
+					2.0,
+					2.6
+				]
+			},
+			{
+				"entity": "minecraft:drowned",
+				"min": 8,
+				"max": 20,
+				"tier": 0,
+				"note": "The harbour is not safe after dark.",
+				"per": [
+					2.5,
+					3.25
+				]
+			},
+			{
+				"entity": "minecraft:witch",
+				"min": 2,
+				"max": 6,
+				"tier": 1,
+				"note": "Strange potions have been thrown at the farmers.",
+				"per": [
+					1.0,
+					1.3
+				]
+			},
+			{
+				"entity": "minecraft:slime",
+				"min": 10,
+				"max": 24,
+				"tier": 0,
+				"note": "The swamp road is sticky again.",
+				"per": [
+					3.33,
+					4.33
+				]
+			},
+			{
+				"entity": "minecraft:enderman",
+				"min": 4,
+				"max": 10,
+				"tier": 1,
+				"note": "Somebody's front wall has gone missing, block by block.",
+				"per": [
+					1.25,
+					1.62
+				]
+			},
+			{
+				"entity": "minecraft:pillager",
+				"min": 6,
+				"max": 12,
+				"tier": 1,
+				"note": "Patrols have been seen on the hill.",
+				"per": [
+					1.25,
+					1.62
+				]
+			},
+			{
+				"entity": "minecraft:phantom",
+				"min": 4,
+				"max": 10,
+				"tier": 1,
+				"note": "Nobody in town has slept properly in days.",
+				"per": [
+					1.25,
+					1.62
+				]
+			},
+			{
+				"entity": "minecraft:blaze",
+				"min": 6,
+				"max": 16,
+				"tier": 2,
+				"note": "The alchemists need their rods.",
+				"per": [
+					1.0,
+					1.3
+				]
+			},
+			{
+				"entity": "minecraft:magma_cube",
+				"min": 8,
+				"max": 20,
+				"tier": 2,
+				"note": "Reports of bouncing in the Nether.",
+				"per": [
+					2.0,
+					2.6
+				]
+			},
+			{
+				"entity": "minecraft:wither_skeleton",
+				"min": 4,
+				"max": 10,
+				"tier": 2,
+				"note": "A fortress that badly needs emptying.",
+				"per": [
+					0.67,
+					0.87
+				]
+			},
+			{
+				"entity": "minecraft:ghast",
+				"min": 2,
+				"max": 6,
+				"tier": 2,
+				"note": "The crying keeps everyone awake.",
+				"per": [
+					0.5,
+					0.65
+				]
+			},
+			{
+				"entity": "minecraft:shulker",
+				"min": 4,
+				"max": 8,
+				"tier": 3,
+				"note": "Their boxes, it seems, are very useful.",
+				"per": [
+					0.5,
+					0.65
+				]
+			}
+		],
+		"pays": [
+			{
+				"item": "minecraft:arrow",
+				"value": 0.0625
+			},
+			{
+				"item": "minecraft:golden_apple",
+				"value": 4
+			},
+			{
+				"item": "minecraft:iron_ingot",
+				"value": 0.5
+			},
+			{
+				"item": "minecraft:experience_bottle",
+				"value": 1
+			}
+		],
+		"roles": [
+			"Watch Captain",
+			"Sergeant of the Watch"
+		]
+	},
+	"skew": 2.0,
+	"maxRewardStacks": 4,
+	"deliveries": 4,
+	"slayings": 2
+}

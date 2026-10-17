@@ -1,0 +1,39 @@
+plugins {
+	id 'spacebod.common'
+}
+
+dependencies {
+	// The on-device writer compiles against the llama.cpp binding; the loader projects bundle it (llama.gradle).
+	compileOnly("net.ladenthin:llama:${project.llama_version}") { transitive = false }
+
+	// Tests run the real news desk, Exchange and press against a bootstrapped vanilla game (no loader, no world).
+	testImplementation platform("org.junit:junit-bom:${project.junit_version}")
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// Only the optional model test (HERALD_MODEL) loads the binding.
+	testImplementation("net.ladenthin:llama:${project.llama_version}") { transitive = false }
+	testRuntimeOnly "com.fasterxml.jackson.core:jackson-databind:${project.jackson_version}"
+}
+
+neoForge {
+	addModdingDependenciesTo(sourceSets.test)
+}
+
+tasks.named('test', Test) {
+	useJUnitPlatform()
+	// The bootstrapped game writes logs/ into its working directory; keep that inside build/.
+	def runDir = layout.buildDirectory.dir('test-run').get().asFile
+	workingDir = runDir
+	doFirst { runDir.mkdirs() }
+	// The scenario gallery (readable editions for each scenario) is written here.
+	systemProperty 'herald.gallery', layout.buildDirectory.dir('scenarios').get().asFile.absolutePath
+	// Optional: a GGUF model to run the scenarios through the writing model as well.
+	if (System.getenv('HERALD_MODEL')) {
+		environment 'HERALD_MODEL', System.getenv('HERALD_MODEL')
+	}
+	maxHeapSize = '2g'
+	testLogging {
+		events 'failed'
+		exceptionFormat 'full'
+	}
+}

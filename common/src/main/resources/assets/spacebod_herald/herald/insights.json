@@ -1,0 +1,1026 @@
+{
+	"_comment": "What the news desk reads into vanilla statistics. 'firsts': a statistic that was zero before this edition and isn't now. 'pursuits': a sum of statistics measuring one activity, compared with the player's own past editions to spot new habits and record weeks. Stat keys are type:id, types: custom, mined, crafted, used (non-block items), placed (block items), picked_up, killed, killed_by, broken.",
+	"firsts": [
+		{
+			"stat": "crafted:wooden_pickaxe",
+			"fact": "made their first pickaxe",
+			"score": 12
+		},
+		{
+			"stat": "crafted:stone_pickaxe",
+			"fact": "upgraded to a stone pickaxe",
+			"score": 10
+		},
+		{
+			"stat": "crafted:iron_pickaxe",
+			"fact": "forged their first iron pickaxe",
+			"score": 22
+		},
+		{
+			"stat": "crafted:diamond_pickaxe",
+			"fact": "crafted their first diamond pickaxe",
+			"score": 45
+		},
+		{
+			"stat": "crafted:diamond_sword",
+			"fact": "crafted their first diamond sword",
+			"score": 40
+		},
+		{
+			"stat": "crafted:diamond_chestplate",
+			"fact": "put on a diamond chestplate for the first time",
+			"score": 42
+		},
+		{
+			"stat": "crafted:netherite_ingot",
+			"fact": "made their first netherite ingot",
+			"score": 60
+		},
+		{
+			"stat": "crafted:enchanting_table",
+			"fact": "built an enchanting table",
+			"score": 35
+		},
+		{
+			"stat": "custom:enchant_item",
+			"fact": "enchanted an item for the first time",
+			"score": 30
+		},
+		{
+			"stat": "crafted:anvil",
+			"fact": "built an anvil",
+			"score": 18
+		},
+		{
+			"stat": "crafted:brewing_stand",
+			"fact": "set up a brewing stand",
+			"score": 25
+		},
+		{
+			"stat": "crafted:beacon",
+			"fact": "built a beacon",
+			"score": 65
+		},
+		{
+			"stat": "crafted:conduit",
+			"fact": "built a conduit",
+			"score": 55
+		},
+		{
+			"stat": "crafted:end_crystal",
+			"fact": "crafted an end crystal",
+			"score": 40
+		},
+		{
+			"stat": "crafted:cake",
+			"fact": "baked their first cake",
+			"score": 20
+		},
+		{
+			"stat": "crafted:bread",
+			"fact": "baked their first loaf of bread",
+			"score": 12
+		},
+		{
+			"stat": "crafted:white_bed",
+			"fact": "made a bed",
+			"score": 10
+		},
+		{
+			"stat": "crafted:map",
+			"fact": "drew their first map",
+			"score": 15
+		},
+		{
+			"stat": "crafted:clock",
+			"fact": "made a clock",
+			"score": 12
+		},
+		{
+			"stat": "crafted:compass",
+			"fact": "made a compass",
+			"score": 12
+		},
+		{
+			"stat": "crafted:jukebox",
+			"fact": "built a jukebox",
+			"score": 15
+		},
+		{
+			"stat": "crafted:shield",
+			"fact": "made a shield",
+			"score": 12
+		},
+		{
+			"stat": "crafted:crossbow",
+			"fact": "made a crossbow",
+			"score": 14
+		},
+		{
+			"stat": "crafted:piston",
+			"fact": "built their first piston",
+			"score": 18
+		},
+		{
+			"stat": "crafted:observer",
+			"fact": "built an observer",
+			"score": 18
+		},
+		{
+			"stat": "crafted:ender_eye",
+			"fact": "crafted an eye of ender",
+			"score": 35
+		},
+		{
+			"stat": "used:ender_eye",
+			"fact": "threw an eye of ender to find a stronghold",
+			"score": 40
+		},
+		{
+			"stat": "used:ender_pearl",
+			"fact": "threw an ender pearl",
+			"score": 15
+		},
+		{
+			"stat": "used:firework_rocket",
+			"fact": "launched a firework rocket",
+			"score": 14
+		},
+		{
+			"stat": "used:flint_and_steel",
+			"fact": "used flint and steel",
+			"score": 16
+		},
+		{
+			"stat": "placed:tnt",
+			"fact": "placed TNT",
+			"score": 25
+		},
+		{
+			"stat": "placed:nether_portal",
+			"fact": "lit a Nether portal",
+			"score": 40
+		},
+		{
+			"stat": "placed:obsidian",
+			"fact": "placed obsidian",
+			"score": 15
+		},
+		{
+			"stat": "mined:diamond_ore",
+			"fact": "found diamonds",
+			"score": 45
+		},
+		{
+			"stat": "mined:deepslate_diamond_ore",
+			"fact": "found diamonds deep underground",
+			"score": 45
+		},
+		{
+			"stat": "mined:ancient_debris",
+			"fact": "dug up ancient debris",
+			"score": 55
+		},
+		{
+			"stat": "mined:emerald_ore",
+			"fact": "found emerald ore",
+			"score": 35
+		},
+		{
+			"stat": "picked_up:elytra",
+			"fact": "picked up an elytra",
+			"score": 70
+		},
+		{
+			"stat": "picked_up:nether_star",
+			"fact": "picked up a nether star",
+			"score": 70
+		},
+		{
+			"stat": "picked_up:totem_of_undying",
+			"fact": "picked up a totem of undying",
+			"score": 50
+		},
+		{
+			"stat": "picked_up:heart_of_the_sea",
+			"fact": "found a heart of the sea",
+			"score": 40
+		},
+		{
+			"stat": "picked_up:trident",
+			"fact": "got hold of a trident",
+			"score": 45
+		},
+		{
+			"stat": "picked_up:netherrack",
+			"fact": "set foot in the Nether",
+			"score": 50
+		},
+		{
+			"stat": "picked_up:end_stone",
+			"fact": "reached the End",
+			"score": 70
+		},
+		{
+			"stat": "custom:sleep_in_bed",
+			"fact": "slept in a bed",
+			"score": 8
+		},
+		{
+			"stat": "custom:traded_with_villager",
+			"fact": "traded with a villager",
+			"score": 14
+		},
+		{
+			"stat": "custom:animals_bred",
+			"fact": "bred animals",
+			"score": 10
+		},
+		{
+			"stat": "custom:fish_caught",
+			"fact": "caught a fish",
+			"score": 10
+		},
+		{
+			"stat": "custom:raid_win",
+			"fact": "won a raid",
+			"score": 60
+		},
+		{
+			"stat": "custom:bell_ring",
+			"fact": "rang a village bell",
+			"score": 8
+		},
+		{
+			"stat": "custom:play_record",
+			"fact": "played a music disc",
+			"score": 12
+		},
+		{
+			"stat": "custom:interact_with_beacon",
+			"fact": "used a beacon",
+			"score": 30
+		},
+		{
+			"stat": "killed:blaze",
+			"fact": "defeated a blaze",
+			"score": 30
+		},
+		{
+			"stat": "killed:ghast",
+			"fact": "brought down a ghast",
+			"score": 35
+		},
+		{
+			"stat": "killed:enderman",
+			"fact": "defeated an enderman",
+			"score": 22
+		},
+		{
+			"stat": "killed:wither_skeleton",
+			"fact": "defeated a wither skeleton",
+			"score": 30
+		},
+		{
+			"stat": "killed:piglin_brute",
+			"fact": "defeated a piglin brute",
+			"score": 35
+		},
+		{
+			"stat": "killed:ravager",
+			"fact": "defeated a ravager",
+			"score": 40
+		},
+		{
+			"stat": "killed:evoker",
+			"fact": "defeated an evoker",
+			"score": 40
+		},
+		{
+			"stat": "killed:shulker",
+			"fact": "defeated a shulker",
+			"score": 40
+		},
+		{
+			"stat": "killed:breeze",
+			"fact": "defeated a breeze",
+			"score": 35
+		}
+	],
+	"pursuits": [
+		{
+			"id": "farming",
+			"section": "Agriculture",
+			"measure": "seeds and crops planted",
+			"stats": [
+				"used:wheat_seeds",
+				"used:carrot",
+				"used:potato",
+				"used:beetroot_seeds",
+				"used:melon_seeds",
+				"used:pumpkin_seeds",
+				"used:torchflower_seeds",
+				"used:pitcher_pod",
+				"used:sweet_berries",
+				"used:nether_wart",
+				"placed:sugar_cane",
+				"placed:cactus",
+				"placed:bamboo",
+				"used:cocoa_beans"
+			],
+			"min": 40
+		},
+		{
+			"id": "forestry",
+			"section": "Forestry",
+			"measure": "logs felled",
+			"stats": [
+				"mined:oak_log",
+				"mined:spruce_log",
+				"mined:birch_log",
+				"mined:jungle_log",
+				"mined:acacia_log",
+				"mined:dark_oak_log",
+				"mined:mangrove_log",
+				"mined:cherry_log",
+				"mined:pale_oak_log",
+				"mined:crimson_stem",
+				"mined:warped_stem"
+			],
+			"min": 64
+		},
+		{
+			"id": "planting",
+			"section": "Gardens",
+			"measure": "saplings and flowers planted",
+			"stats": [
+				"placed:oak_sapling",
+				"placed:spruce_sapling",
+				"placed:birch_sapling",
+				"placed:jungle_sapling",
+				"placed:acacia_sapling",
+				"placed:dark_oak_sapling",
+				"placed:cherry_sapling",
+				"placed:mangrove_propagule",
+				"placed:pale_oak_sapling",
+				"placed:dandelion",
+				"placed:poppy",
+				"placed:blue_orchid",
+				"placed:allium",
+				"placed:azure_bluet",
+				"placed:red_tulip",
+				"placed:orange_tulip",
+				"placed:white_tulip",
+				"placed:pink_tulip",
+				"placed:oxeye_daisy",
+				"placed:cornflower",
+				"placed:lily_of_the_valley",
+				"placed:sunflower",
+				"placed:lilac",
+				"placed:rose_bush",
+				"placed:peony",
+				"custom:pot_flower"
+			],
+			"min": 16
+		},
+		{
+			"id": "baking",
+			"section": "Food",
+			"measure": "loaves, cakes, pies and cookies baked",
+			"stats": [
+				"crafted:bread",
+				"crafted:cake",
+				"crafted:pumpkin_pie",
+				"crafted:cookie"
+			],
+			"min": 16
+		},
+		{
+			"id": "cooking",
+			"section": "Food",
+			"measure": "meals cooked",
+			"stats": [
+				"crafted:cooked_beef",
+				"crafted:cooked_porkchop",
+				"crafted:cooked_chicken",
+				"crafted:cooked_mutton",
+				"crafted:cooked_rabbit",
+				"crafted:cooked_cod",
+				"crafted:cooked_salmon",
+				"crafted:baked_potato",
+				"crafted:dried_kelp",
+				"crafted:mushroom_stew",
+				"crafted:rabbit_stew",
+				"crafted:beetroot_soup"
+			],
+			"min": 24
+		},
+		{
+			"id": "smelting",
+			"section": "Industry",
+			"measure": "ingots smelted",
+			"stats": [
+				"crafted:iron_ingot",
+				"crafted:gold_ingot",
+				"crafted:copper_ingot",
+				"crafted:netherite_scrap"
+			],
+			"min": 32
+		},
+		{
+			"id": "toolmaking",
+			"section": "Tools & Trades",
+			"measure": "tools and weapons made",
+			"stats": [
+				"crafted:wooden_pickaxe",
+				"crafted:stone_pickaxe",
+				"crafted:iron_pickaxe",
+				"crafted:golden_pickaxe",
+				"crafted:diamond_pickaxe",
+				"crafted:wooden_axe",
+				"crafted:stone_axe",
+				"crafted:iron_axe",
+				"crafted:diamond_axe",
+				"crafted:wooden_shovel",
+				"crafted:stone_shovel",
+				"crafted:iron_shovel",
+				"crafted:diamond_shovel",
+				"crafted:iron_sword",
+				"crafted:diamond_sword",
+				"crafted:stone_sword",
+				"crafted:wooden_sword",
+				"crafted:bow",
+				"crafted:crossbow",
+				"crafted:shears",
+				"crafted:fishing_rod"
+			],
+			"min": 6
+		},
+		{
+			"id": "redstone",
+			"section": "Science",
+			"measure": "redstone parts placed",
+			"stats": [
+				"placed:redstone_wire",
+				"placed:redstone",
+				"placed:repeater",
+				"placed:comparator",
+				"placed:piston",
+				"placed:sticky_piston",
+				"placed:observer",
+				"placed:hopper",
+				"placed:dropper",
+				"placed:dispenser",
+				"placed:lever",
+				"placed:redstone_torch",
+				"placed:target",
+				"placed:redstone_lamp",
+				"placed:daylight_detector"
+			],
+			"min": 24
+		},
+		{
+			"id": "explosives",
+			"section": "Public Safety",
+			"measure": "blocks of TNT placed",
+			"stats": [
+				"placed:tnt"
+			],
+			"min": 4
+		},
+		{
+			"id": "decorating",
+			"section": "Home & Garden",
+			"measure": "decorations placed",
+			"stats": [
+				"placed:lantern",
+				"placed:torch",
+				"placed:painting",
+				"placed:item_frame",
+				"placed:flower_pot",
+				"placed:candle",
+				"placed:white_carpet",
+				"placed:red_carpet",
+				"placed:white_banner",
+				"placed:bookshelf",
+				"placed:chiseled_bookshelf",
+				"placed:decorated_pot",
+				"placed:armor_stand"
+			],
+			"min": 32
+		},
+		{
+			"id": "brewing",
+			"section": "Science",
+			"measure": "visits to the brewing stand",
+			"stats": [
+				"custom:interact_with_brewingstand"
+			],
+			"min": 8
+		},
+		{
+			"id": "enchanting",
+			"section": "Arcane Affairs",
+			"measure": "items enchanted",
+			"stats": [
+				"custom:enchant_item"
+			],
+			"min": 4
+		},
+		{
+			"id": "fishing",
+			"section": "Angling",
+			"measure": "fish caught",
+			"stats": [
+				"custom:fish_caught"
+			],
+			"min": 10
+		},
+		{
+			"id": "husbandry",
+			"section": "Agriculture",
+			"measure": "animals bred",
+			"stats": [
+				"custom:animals_bred"
+			],
+			"min": 10
+		},
+		{
+			"id": "trading",
+			"section": "Commerce",
+			"measure": "trades with villagers",
+			"stats": [
+				"custom:traded_with_villager"
+			],
+			"min": 8
+		},
+		{
+			"id": "music",
+			"section": "Arts",
+			"measure": "notes and records played",
+			"stats": [
+				"custom:play_noteblock",
+				"custom:play_record",
+				"custom:tune_noteblock"
+			],
+			"min": 24
+		},
+		{
+			"id": "sailing",
+			"section": "Travel",
+			"measure": "kilometres sailed",
+			"stats": [
+				"custom:boat_one_cm"
+			],
+			"divide": 100000,
+			"min": 2
+		},
+		{
+			"id": "flying",
+			"section": "Travel",
+			"measure": "kilometres flown",
+			"stats": [
+				"custom:aviate_one_cm"
+			],
+			"divide": 100000,
+			"min": 2
+		},
+		{
+			"id": "hunting",
+			"section": "Public Safety",
+			"measure": "monsters and creatures defeated",
+			"stats": [
+				"custom:mob_kills"
+			],
+			"min": 30
+		},
+		{
+			"id": "digging",
+			"section": "Industry",
+			"measure": "blocks mined",
+			"stats": [
+				"mined:stone",
+				"mined:deepslate",
+				"mined:cobblestone",
+				"mined:dirt",
+				"mined:grass_block",
+				"mined:gravel",
+				"mined:sand",
+				"mined:netherrack",
+				"mined:tuff",
+				"mined:andesite",
+				"mined:diorite",
+				"mined:granite",
+				"mined:coal_ore",
+				"mined:iron_ore",
+				"mined:copper_ore",
+				"mined:deepslate_iron_ore",
+				"mined:deepslate_coal_ore",
+				"mined:deepslate_copper_ore"
+			],
+			"min": 300
+		},
+		{
+			"id": "building",
+			"section": "Property",
+			"measure": "blocks placed",
+			"stats": [
+				"placed:*"
+			],
+			"min": 400
+		}
+	],
+	"leaderboards": {
+		"_comment": "Leaderboard candidates. Each edition ranks them twice, since the last edition (the Leaderboard page) and over all time (the Hall of Fame page), and prints the 'count' most interesting of each: busy boards, close races, boards not shown last time. 'Top {mob} Hunter' boards are added for every creature anyone killed.",
+		"count": 8,
+		"boards": [
+			{
+				"id": "mined",
+				"title": "Most Blocks Mined",
+				"unit": "blocks mined",
+				"stats": [
+					"mined:*"
+				],
+				"weight": 1.0,
+				"min": 20
+			},
+			{
+				"id": "placed",
+				"title": "Master Builder",
+				"unit": "blocks placed",
+				"stats": [
+					"placed:*"
+				],
+				"weight": 1.0,
+				"min": 20
+			},
+			{
+				"id": "travel",
+				"title": "Furthest Travelled",
+				"unit": "kilometres",
+				"stats": [
+					"custom:walk_one_cm",
+					"custom:sprint_one_cm",
+					"custom:crouch_one_cm",
+					"custom:swim_one_cm",
+					"custom:boat_one_cm",
+					"custom:horse_one_cm",
+					"custom:aviate_one_cm",
+					"custom:minecart_one_cm",
+					"custom:walk_on_water_one_cm",
+					"custom:walk_under_water_one_cm",
+					"custom:climb_one_cm"
+				],
+				"weight": 1.0,
+				"min": 1,
+				"divide": 100000
+			},
+			{
+				"id": "kills",
+				"title": "Monster Hunter",
+				"unit": "creatures defeated",
+				"stats": [
+					"custom:mob_kills"
+				],
+				"weight": 1.0,
+				"min": 3
+			},
+			{
+				"id": "deaths",
+				"title": "Most Accident-Prone",
+				"unit": "deaths",
+				"stats": [
+					"custom:deaths"
+				],
+				"weight": 1.2,
+				"min": 1
+			},
+			{
+				"id": "hurt",
+				"title": "Took the Most Punishment",
+				"unit": "hearts lost",
+				"stats": [
+					"custom:damage_taken"
+				],
+				"weight": 0.8,
+				"min": 5,
+				"divide": 20
+			},
+			{
+				"id": "dealt",
+				"title": "Heaviest Hitter",
+				"unit": "hearts of damage dealt",
+				"stats": [
+					"custom:damage_dealt"
+				],
+				"weight": 0.8,
+				"min": 5,
+				"divide": 20
+			},
+			{
+				"id": "jumps",
+				"title": "Bounciest Resident",
+				"unit": "jumps",
+				"stats": [
+					"custom:jump"
+				],
+				"weight": 0.6,
+				"min": 50
+			},
+			{
+				"id": "fish",
+				"title": "Top Angler",
+				"unit": "fish caught",
+				"stats": [
+					"custom:fish_caught"
+				],
+				"weight": 0.9,
+				"min": 1
+			},
+			{
+				"id": "trades",
+				"title": "Shrewdest Trader",
+				"unit": "villager trades",
+				"stats": [
+					"custom:traded_with_villager"
+				],
+				"weight": 0.9,
+				"min": 1
+			},
+			{
+				"id": "bred",
+				"title": "Best Breeder",
+				"unit": "animals bred",
+				"stats": [
+					"custom:animals_bred"
+				],
+				"weight": 0.8,
+				"min": 2
+			},
+			{
+				"id": "crafted",
+				"title": "Busiest Workbench",
+				"unit": "items crafted",
+				"stats": [
+					"crafted:*"
+				],
+				"weight": 0.8,
+				"min": 10
+			},
+			{
+				"id": "time",
+				"title": "Most Hours Played",
+				"unit": "hours",
+				"stats": [
+					"custom:play_time"
+				],
+				"weight": 0.6,
+				"min": 1,
+				"divide": 72000
+			},
+			{
+				"id": "tools",
+				"title": "Hardest on Tools",
+				"unit": "tools worn out",
+				"stats": [
+					"broken:*"
+				],
+				"weight": 0.9,
+				"min": 1
+			},
+			{
+				"id": "cake",
+				"title": "Sweetest Tooth",
+				"unit": "slices of cake",
+				"stats": [
+					"custom:eat_cake_slice"
+				],
+				"weight": 1.0,
+				"min": 1
+			},
+			{
+				"id": "chests",
+				"title": "Nosiest Neighbour",
+				"unit": "chests opened",
+				"stats": [
+					"custom:open_chest",
+					"custom:open_barrel",
+					"custom:open_shulker_box"
+				],
+				"weight": 0.6,
+				"min": 10
+			},
+			{
+				"id": "enchant",
+				"title": "Top Enchanter",
+				"unit": "items enchanted",
+				"stats": [
+					"custom:enchant_item"
+				],
+				"weight": 1.0,
+				"min": 1
+			},
+			{
+				"id": "sleep",
+				"title": "Best Rested",
+				"unit": "nights slept",
+				"stats": [
+					"custom:sleep_in_bed"
+				],
+				"weight": 0.5,
+				"min": 1
+			},
+			{
+				"id": "flight",
+				"title": "Ace Aviator",
+				"unit": "kilometres flown",
+				"stats": [
+					"custom:aviate_one_cm"
+				],
+				"weight": 1.0,
+				"min": 1,
+				"divide": 100000
+			},
+			{
+				"id": "sailing",
+				"title": "Admiral of the Fleet",
+				"unit": "kilometres sailed",
+				"stats": [
+					"custom:boat_one_cm"
+				],
+				"weight": 0.8,
+				"min": 1,
+				"divide": 100000
+			},
+			{
+				"id": "riding",
+				"title": "Best Rider",
+				"unit": "kilometres on horseback",
+				"stats": [
+					"custom:horse_one_cm"
+				],
+				"weight": 0.8,
+				"min": 1,
+				"divide": 100000
+			},
+			{
+				"id": "farming",
+				"title": "Green Fingers",
+				"unit": "crops planted",
+				"stats": [
+					"used:wheat_seeds",
+					"used:carrot",
+					"used:potato",
+					"used:beetroot_seeds",
+					"used:melon_seeds",
+					"used:pumpkin_seeds",
+					"used:sweet_berries",
+					"used:nether_wart",
+					"placed:sugar_cane",
+					"placed:cactus",
+					"placed:bamboo"
+				],
+				"weight": 0.9,
+				"min": 10
+			},
+			{
+				"id": "logs",
+				"title": "Lumberjack",
+				"unit": "logs felled",
+				"stats": [
+					"mined:oak_log",
+					"mined:spruce_log",
+					"mined:birch_log",
+					"mined:jungle_log",
+					"mined:acacia_log",
+					"mined:dark_oak_log",
+					"mined:mangrove_log",
+					"mined:cherry_log",
+					"mined:pale_oak_log",
+					"mined:crimson_stem",
+					"mined:warped_stem"
+				],
+				"weight": 0.9,
+				"min": 10
+			},
+			{
+				"id": "diamonds",
+				"title": "Diamond Prospector",
+				"unit": "diamond ore mined",
+				"stats": [
+					"mined:diamond_ore",
+					"mined:deepslate_diamond_ore"
+				],
+				"weight": 1.3,
+				"min": 1
+			},
+			{
+				"id": "debris",
+				"title": "Netherite Hunter",
+				"unit": "ancient debris mined",
+				"stats": [
+					"mined:ancient_debris"
+				],
+				"weight": 1.3,
+				"min": 1
+			},
+			{
+				"id": "iron",
+				"title": "Iron Baron",
+				"unit": "iron ore mined",
+				"stats": [
+					"mined:iron_ore",
+					"mined:deepslate_iron_ore"
+				],
+				"weight": 0.8,
+				"min": 3
+			},
+			{
+				"id": "gold",
+				"title": "Gold Rush",
+				"unit": "gold ore mined",
+				"stats": [
+					"mined:gold_ore",
+					"mined:deepslate_gold_ore",
+					"mined:nether_gold_ore"
+				],
+				"weight": 0.8,
+				"min": 3
+			},
+			{
+				"id": "emeralds",
+				"title": "Emerald Finder",
+				"unit": "emerald ore mined",
+				"stats": [
+					"mined:emerald_ore",
+					"mined:deepslate_emerald_ore"
+				],
+				"weight": 1.1,
+				"min": 1
+			},
+			{
+				"id": "bells",
+				"title": "Town Crier",
+				"unit": "bells rung",
+				"stats": [
+					"custom:bell_ring"
+				],
+				"weight": 0.5,
+				"min": 1
+			},
+			{
+				"id": "music",
+				"title": "Musician of the Week",
+				"unit": "notes and records played",
+				"stats": [
+					"custom:play_noteblock",
+					"custom:play_record"
+				],
+				"weight": 0.6,
+				"min": 5
+			},
+			{
+				"id": "bread",
+				"title": "Master Baker",
+				"unit": "loaves, cakes and pies baked",
+				"stats": [
+					"crafted:bread",
+					"crafted:cake",
+					"crafted:pumpkin_pie",
+					"crafted:cookie"
+				],
+				"weight": 0.9,
+				"min": 3
+			},
+			{
+				"id": "tnt",
+				"title": "Demolition Expert",
+				"unit": "TNT placed",
+				"stats": [
+					"placed:tnt"
+				],
+				"weight": 1.1,
+				"min": 1
+			},
+			{
+				"id": "torches",
+				"title": "Lamplighter",
+				"unit": "torches placed",
+				"stats": [
+					"placed:torch",
+					"placed:wall_torch",
+					"placed:soul_torch",
+					"placed:lantern"
+				],
+				"weight": 0.6,
+				"min": 16
+			}
+		],
+		"mobBoard": {
+			"title": "Top {mob} Hunter",
+			"unit": "{mobs} defeated",
+			"weight": 1.0,
+			"min": 3
+		}
+	}
+}

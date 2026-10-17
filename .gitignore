@@ -1,0 +1,47 @@
+# Gradle
+.gradle/
+build/
+out/
+!**/src/**/build/
+!**/src/**/out/
+
+# Dev runs (worlds, configs, logs, downloaded models)
+**/run/
+logs/
+
+# Writing models: large downloads, never committed
+*.gguf
+*.gguf.part
+herald-models/
+
+# Built release jars (attached to GitHub Releases instead)
+releases/
+
+# Fabric / Loom
+**/remappedSrc/
+**/.loom-cache/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+.factorypath
+*.launch
+
+# Local tooling
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Env
+*.env
+.env.*

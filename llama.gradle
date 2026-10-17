@@ -1,0 +1,29 @@
+// The optional on-device writer: the llama.cpp JNI binding. Applied by both loader projects.
+//
+// The binding's jar carries llama.cpp natives for every platform it supports (Android, s390x, 32-bit
+// Windows...). Its classes and only the natives Minecraft actually runs on are copied into the mod jar,
+// which keeps the jar a fraction of the binding's 76 MB. Its one real dependency, Jackson, is nested
+// as a library jar (jar-in-jar on both loaders), so other mods shipping Jackson resolve to one copy.
+configurations {
+	llama { transitive = false }
+}
+
+def keptNatives = ['Windows/x86_64', 'Windows/aarch64', 'Linux/x86_64', 'Linux/aarch64', 'Mac/aarch64']
+
+dependencies {
+	llama "net.ladenthin:llama:${project.llama_version}"
+	compileOnly("net.ladenthin:llama:${project.llama_version}") { transitive = false }
+	implementation "com.fasterxml.jackson.core:jackson-databind:${project.jackson_version}"
+}
+
+tasks.named('jar', Jar) {
+	inputs.files(configurations.llama)
+	from({ configurations.llama.collect { zipTree(it) } }) {
+		exclude 'module-info.class', 'META-INF/**'
+		exclude { FileTreeElement e ->
+			def path = e.relativePath.pathString
+			path ==~ /net\/ladenthin\/llama\/[^\/]+\/[^\/]+\/[^\/]+\.(so|dll|dylib)/ &&
+					!keptNatives.any { path.startsWith("net/ladenthin/llama/${it}/") }
+		}
+	}
+}

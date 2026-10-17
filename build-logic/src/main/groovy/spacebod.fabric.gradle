@@ -1,0 +1,88 @@
+// The Fabric jar: fabric/src (entrypoints, Mod Menu hook, fabric.mod.json) compiled together with
+// the shared common/src sources.
+plugins {
+	id 'spacebod.base'
+	id 'net.fabricmc.fabric-loom'
+}
+
+version = "${project.mod_version}+mc${mcSeries}-fabric"
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"${project.mod_id}" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+	runs {
+		// Loom only makes IDE run configs for the root project by default; fabric/ is a subproject.
+		configureEach {
+			ideConfigGenerated(true)
+			runDir runDirName
+		}
+		// Headless smoke test: boots a server with the mod, runs any game tests, then exits. No EULA needed.
+		gameTestServer {
+			server()
+			name 'Fabric Game Test Server'
+			vmArg '-Dfabric-api.gametest'
+			runDir 'run/gametest'
+		}
+	}
+}
+
+// Version-specific overlay for Fabric-only code. Missing directories are simply ignored.
+['main', 'client'].each { name ->
+	sourceSets.named(name) {
+		java.srcDir "src/versions/${mcSeries}/${name}/java"
+		resources.srcDir "src/versions/${mcSeries}/${name}/resources"
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+	// Only so the IDE sees common's classes; the sources themselves are compiled in below.
+	compileOnly(project(':common')) {
+		attributes { attribute(loaderAttribute, 'common') }
+	}
+	clientCompileOnly(project(':common')) {
+		attributes { attribute(loaderAttribute, 'common') }
+		capabilities { requireFeature('client') }
+	}
+
+	// Optional: config screen in Mod Menu, built with Cloth Config. Neither is required at runtime.
+	// Loom 1.17 has no modCompileOnly/modLocalRuntime; plain compileOnly + localRuntime do the job.
+	compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+	localRuntime "com.terraformersmc:modmenu:${project.modmenu_version}"
+	compileOnly "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+	localRuntime "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+}
+
+tasks.named('compileJava', JavaCompile) { source(commonSrc('main', 'java')) }
+tasks.named('compileClientJava', JavaCompile) { source(commonSrc('client', 'java')) }
+tasks.named('processResources', ProcessResources) { from(commonSrc('main', 'resources')) }
+tasks.named('processClientResources', ProcessResources) { from(commonSrc('client', 'resources')) }
+tasks.named('sourcesJar', Jar) {
+	from(commonSrc('main', 'java') + commonSrc('client', 'java'))
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+processResources {
+	def version = project.version
+	// ">=26.3- <26.4-": the trailing hyphens make Fabric Loader include pre-releases, so a jar built
+	// for a series also loads on that series' snapshots/RCs and on every patch release within it.
+	def minecraftRange = ">=${mcSeries}- <${mcNextSeries}-"
+	inputs.property 'version', version
+	inputs.property 'minecraftRange', minecraftRange
+
+	filesMatching('fabric.mod.json') {
+		expand 'version': version, 'minecraft_range': minecraftRange
+	}
+}
+
+markLoader('fabric', ['includeInternal', 'modCompileClasspath'])

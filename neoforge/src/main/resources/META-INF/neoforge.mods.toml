@@ -1,0 +1,30 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/SpaceBod/herald/issues"
+
+[[mods]]
+modId = "spacebod_herald"
+version = "${version}"
+displayName = "Herald"
+displayURL = "https://github.com/SpaceBod/herald"
+iconFile = "assets/spacebod_herald/icon.png"
+authors = "SpaceBod"
+description = '''A weekly newspaper about your world's players, written from what actually happened and delivered by a delivery dog. Optionally written by a small AI model that runs on your own computer.'''
+
+[[mixins]]
+config = "spacebod_herald.mixins.json"
+
+[[dependencies.spacebod_herald]]
+modId = "neoforge"
+type = "required"
+versionRange = "${minecraft_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.spacebod_herald]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_range}"
+ordering = "NONE"
+side = "BOTH"

@@ -1,0 +1,13 @@
+plugins {
+	id 'spacebod.neoforge'
+}
+
+apply from: rootProject.file('llama.gradle')
+
+dependencies {
+	// Dev runs load the binding straight from its jar; the release jar has it copied in (llama.gradle).
+	runtimeOnly("net.ladenthin:llama:${project.llama_version}") { transitive = false }
+	jarJar "com.fasterxml.jackson.core:jackson-databind:${project.jackson_version}"
+	jarJar "com.fasterxml.jackson.core:jackson-core:${project.jackson_version}"
+	jarJar "com.fasterxml.jackson.core:jackson-annotations:${project.jackson_annotations_version}"
+}

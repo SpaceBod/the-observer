@@ -1,0 +1,11 @@
+// Shared Gradle conventions (the same ones the other SpaceBod mods use). settings.gradle pulls this in with
+// includeBuild('build-logic'), so the Fabric and NeoForge build setup lives in one place.
+dependencyResolutionManagement {
+	repositories {
+		gradlePluginPortal()
+		maven { name = 'Fabric'; url = 'https://maven.fabricmc.net/' }
+		maven { name = 'NeoForged'; url = 'https://maven.neoforged.net/releases/' }
+	}
+}
+
+rootProject.name = 'build-logic'

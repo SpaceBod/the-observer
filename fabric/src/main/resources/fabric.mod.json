@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "spacebod_herald",
+	"version": "${version}",
+	"name": "Herald",
+	"description": "A weekly newspaper about your world's players, written from what actually happened and delivered by a delivery dog. Optionally written by a small AI model that runs on your own computer.",
+	"authors": [
+		"SpaceBod"
+	],
+	"contact": {
+		"homepage": "https://github.com/SpaceBod/herald",
+		"sources": "https://github.com/SpaceBod/herald",
+		"issues": "https://github.com/SpaceBod/herald/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/spacebod_herald/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.spacebod.herald.fabric.HeraldFabric"
+		],
+		"client": [
+			"dev.spacebod.herald.fabric.client.HeraldFabricClient"
+		]
+	},
+	"mixins": [
+		"spacebod_herald.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "${minecraft_range}",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

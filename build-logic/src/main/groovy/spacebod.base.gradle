@@ -1,0 +1,76 @@
+// Applied by all three subprojects of a mod (common, fabric, neoforge).
+//
+// One code base, one jar per Minecraft series (26.1, 26.2, 26.3, ...) per loader. The series is derived
+// from minecraft_version (26.1.2 -> 26.1, 26.3-rc-3 -> 26.3) and drives the "+mc<series>" part of the
+// version, the minecraft dependency range written into each loader's metadata, and which
+// src/versions/<series>/ overlay is compiled in. Anything that is the same on every version lives in
+// common/src/main and common/src/client as usual; only classes that genuinely differ go in an overlay,
+// one copy per series, so each jar is plain compiled code for exactly the game it targets - no
+// reflection, no runtime version sniffing. release-matrix.ps1 builds every series by overriding
+// minecraft_version (and the loader versions that go with it) on the command line.
+plugins {
+	id 'java-library'
+}
+
+def mcSeries = (project.minecraft_version =~ /^\d+\.\d+/)[0]
+def mcNextSeries = mcSeries.tokenize('.').with { "${it[0]}.${(it[1] as int) + 1}" }
+ext.mcSeries = mcSeries
+ext.mcNextSeries = mcNextSeries
+
+// Optional -Pinstance=<name>: gives this build its own build/ and run/ folders, so several Minecraft
+// versions can be built and played side by side from one checkout (see test-instances.ps1).
+def instance = project.findProperty('instance')
+if (instance) {
+	layout.buildDirectory = project.file("build/instances/${instance}")
+}
+ext.runDirName = instance ? "run/instances/${instance}" : 'run'
+
+// Every jar is named after the mod folder (cascade, tidy, ...); the loader goes into the version.
+base.archivesName = rootProject.name
+
+// Directories of the shared code. The loader projects compile these sources themselves rather than
+// depending on a common jar, so each loader jar is self-contained.
+ext.commonSrc = { String sourceSet, String kind ->
+	[rootProject.file("common/src/${sourceSet}/${kind}"),
+	 rootProject.file("common/src/versions/${mcSeries}/${sourceSet}/${kind}")]
+}
+
+repositories {
+	mavenCentral()
+	maven { name = 'Fabric'; url = 'https://maven.fabricmc.net/' }
+	maven { name = 'TerraformersMC'; url = 'https://maven.terraformersmc.com/releases/' }
+	maven { name = 'Shedaniel'; url = 'https://maven.shedaniel.me/' }
+}
+
+java {
+	withSourcesJar()
+	// A toolchain rather than source/targetCompatibility: ModDevGradle runs its own tools (asset
+	// download, the game itself) on the project toolchain, and asks for Java 21 when none is set.
+	toolchain.languageVersion = JavaLanguageVersion.of(25)
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.release = 25
+	options.encoding = 'UTF-8'
+}
+
+tasks.withType(Jar).configureEach {
+	def projectName = rootProject.name
+	from(rootProject.file('LICENSE')) {
+		rename { "${it}_${projectName}" }
+	}
+}
+
+// Mark every classpath and published variant with the loader it belongs to. Without this, a loader
+// project asking for project(':common') cannot tell common's variants apart from its own, and
+// dependency resolution fails. Each plugin below calls markLoader once all of its source sets exist;
+// the loader projects then ask for loaderAttribute = 'common' on their project(':common') dependency.
+def loaderAttribute = Attribute.of('dev.spacebod.loader', String)
+ext.loaderAttribute = loaderAttribute
+ext.markLoader = { String loader, List<String> extraConfigurations = [] ->
+	def names = ['apiElements', 'runtimeElements', 'sourcesElements'] + extraConfigurations
+	sourceSets.each { names += [it.compileClasspathConfigurationName, it.runtimeClasspathConfigurationName] }
+	names.each { name ->
+		configurations.named(name) { attributes { attribute(loaderAttribute, loader) } }
+	}
+}

@@ -1,0 +1,16 @@
+pluginManagement {
+	// Fabric/NeoForge build conventions (spacebod.common, .fabric, .neoforge), shared with the other SpaceBod mods.
+	includeBuild('build-logic')
+	repositories {
+		maven { name = 'Fabric'; url = 'https://maven.fabricmc.net/' }
+		maven { name = 'NeoForged'; url = 'https://maven.neoforged.net/releases/' }
+		mavenCentral()
+		gradlePluginPortal()
+	}
+}
+
+rootProject.name = 'herald'
+
+include('common')   // loader-agnostic code, compiled into both jars
+include('fabric')   // -> build/libs/herald-<version>+mc<series>-fabric.jar
+include('neoforge') // -> build/libs/herald-<version>+mc<series>-neoforge.jar

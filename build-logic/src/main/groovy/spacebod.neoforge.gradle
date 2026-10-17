@@ -1,0 +1,92 @@
+// The NeoForge jar: neoforge/src (the @Mod classes, event wiring, neoforge.mods.toml) compiled together
+// with the shared common/src sources. NeoForge has no split source sets, so common's main and client
+// code both go into the one source set here; client-only classes simply never load on a server.
+plugins {
+	id 'spacebod.base'
+	id 'net.neoforged.moddev'
+}
+
+version = "${project.mod_version}+mc${mcSeries}-neoforge"
+
+// Version-specific overlay for NeoForge-only code. Missing directories are simply ignored.
+sourceSets.named('main') {
+	java.srcDir "src/versions/${mcSeries}/main/java"
+	resources.srcDir "src/versions/${mcSeries}/main/resources"
+}
+
+// Mods that should be on the dev-run classpath but are never a real dependency (e.g. Cloth Config).
+configurations {
+	localRuntime
+	runtimeClasspath.extendsFrom localRuntime
+}
+
+neoForge {
+	version = project.neoforge_version
+
+	runs {
+		client {
+			client()
+			gameDirectory = project.file(runDirName)
+		}
+		server {
+			server()
+			gameDirectory = project.file("${runDirName}/server")
+			programArgument '--nogui'
+		}
+		// Headless smoke test: boots a server with the mod, runs any game tests, then exits. No EULA needed.
+		gameTestServer {
+			type = 'gameTestServer'
+			gameDirectory = project.file('run/gametest')
+		}
+	}
+
+	mods {
+		"${project.mod_id}" {
+			sourceSet sourceSets.main
+		}
+	}
+}
+
+// ModDevGradle's asset download (needed by runClient and the game test server) otherwise insists on
+// a Java 21 toolchain; run it on the same JDK 25 as everything else.
+tasks.withType(net.neoforged.nfrtgradle.NeoFormRuntimeTask).configureEach {
+	javaExecutable = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+			.map { it.executablePath.asFile.absolutePath }
+}
+
+dependencies {
+	// Only so the IDE sees common's classes; the sources themselves are compiled in below.
+	compileOnly(project(':common')) {
+		attributes { attribute(loaderAttribute, 'common') }
+	}
+	compileOnly(project(':common')) {
+		attributes { attribute(loaderAttribute, 'common') }
+		capabilities { requireFeature('client') }
+	}
+
+	// Optional: config screen in NeoForge's own Mods list, built with Cloth Config. Not required at runtime.
+	compileOnly "me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}"
+	localRuntime "me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}"
+}
+
+tasks.named('compileJava', JavaCompile) { source(commonSrc('main', 'java') + commonSrc('client', 'java')) }
+tasks.named('processResources', ProcessResources) { from(commonSrc('main', 'resources') + commonSrc('client', 'resources')) }
+tasks.named('sourcesJar', Jar) {
+	from(commonSrc('main', 'java') + commonSrc('client', 'java'))
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+processResources {
+	def version = project.version
+	// Maven-style ranges. NeoForge builds are tied to one Minecraft version anyway, so the neoforge range
+	// just has to span the series: "[26.3,26.4)".
+	def minecraftRange = "[${mcSeries},${mcNextSeries})"
+	inputs.property 'version', version
+	inputs.property 'minecraftRange', minecraftRange
+
+	filesMatching('META-INF/neoforge.mods.toml') {
+		expand 'version': version, 'minecraft_range': minecraftRange
+	}
+}
+
+markLoader('neoforge')
