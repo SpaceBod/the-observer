@@ -1,0 +1,69 @@
+name: Bug or crash
+description: Something is broken, or the game crashes or won't start.
+title: "[Bug] <short description>"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What went wrong, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the newsstand
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Crash report or log
+      description: Drag in the file from `crash-reports/` if the game crashed, otherwise `logs/latest.log`.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: The Observer version
+      description: The jar's name is best, e.g. observer-0.1.0+mc26.3-fabric.jar
+    validations:
+      required: true
+  - type: dropdown
+    id: minecraft
+    attributes:
+      label: Minecraft version
+      options:
+        - "26.1"
+        - "26.2"
+        - "26.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Mod loader
+      options:
+        - Fabric
+        - NeoForge
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where it happens
+      options:
+        - Singleplayer
+        - Multiplayer server
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods
+      description: Anything else in your mods folder, or "none".

@@ -1,0 +1,70 @@
+name: AI writing
+description: A story reads wrong, the writing model won't load, or it isn't using your graphics card.
+title: "[Writing] <short description>"
+labels: ["ai writing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [The AI newsroom](https://github.com/SpaceBod/the-observer/blob/main/docs/press.md) explains how editions are
+        written, the models, and GPU and CPU use.
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: For a story that reads wrong, a screenshot of it or its text is best.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Output of /observer status
+      description: Run it in game after an edition and paste what it prints.
+    validations:
+      required: true
+  - type: dropdown
+    id: model
+    attributes:
+      label: Writing model
+      options:
+        - Standard (Qwen3.5 0.8B)
+        - Quality (Qwen3.5 2B)
+        - My own model
+        - None installed
+    validations:
+      required: true
+  - type: dropdown
+    id: voice
+    attributes:
+      label: The paper's voice
+      options:
+        - The Broadsheet
+        - The Roast
+        - The Chronicle
+  - type: input
+    id: version
+    attributes:
+      label: The Observer version
+      description: The jar's name is best, e.g. observer-0.1.0+mc26.3-fabric.jar
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: GPU, driver and RAM
+      description: e.g. RTX 3080 (driver 616.56), 32 GB
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - Linux
+        - macOS
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: Drag in `logs/latest.log` from a session where an edition was written.

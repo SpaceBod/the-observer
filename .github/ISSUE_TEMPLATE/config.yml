@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/SpaceBod/the-observer/tree/main/docs
+    about: Features in detail, how the paper is written, and getting started.
+  - name: Commands and settings
+    url: https://github.com/SpaceBod/the-observer/blob/main/docs/configuration.md
+    about: Every command, every setting and where the files live.
