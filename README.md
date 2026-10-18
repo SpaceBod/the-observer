@@ -4,7 +4,7 @@
 
 <img src="docs/images/banner.jpg" alt="The Observer: the AI newspaper for your world. A newsstand on the left, the Pawstman with the paper on the right" width="100%">
 
-<img src="https://img.shields.io/badge/Minecraft-26.1%20%E2%80%93%2026.3-62B47A?style=for-the-badge" alt="Minecraft 26.1 to 26.3" height="40">
+<img src="https://img.shields.io/badge/Minecraft-26.1%20to%2026.3-62B47A?style=for-the-badge" alt="Minecraft 26.1 to 26.3" height="40">
 <img src="https://img.shields.io/badge/Written%20by-a%20local%20AI-1F3A8A?style=for-the-badge" alt="Written by an AI on your own computer" height="40">
 <img src="https://img.shields.io/badge/License-MIT-9A1F1F?style=for-the-badge" alt="MIT licence" height="40">
 <br>

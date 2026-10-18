@@ -1,6 +1,6 @@
 ![The Observer](https://raw.githubusercontent.com/SpaceBod/the-observer/main/docs/images/banner.jpg)
 
-![Minecraft 26.1 to 26.3](https://img.shields.io/badge/Minecraft-26.1%20%E2%80%93%2026.3-62B47A?style=for-the-badge)
+![Minecraft 26.1 to 26.3](https://img.shields.io/badge/Minecraft-26.1%20to%2026.3-62B47A?style=for-the-badge)
 ![Fabric and NeoForge](https://img.shields.io/badge/Fabric%20%26%20NeoForge-supported-DBD0B4?style=for-the-badge)
 ![Written by a local AI](https://img.shields.io/badge/Written%20by-a%20local%20AI-1F3A8A?style=for-the-badge)
 
