@@ -1,0 +1,962 @@
+{
+	"_comment": "House copy for the Observer. Each story kind has headlines and bodies; one of each is picked per edition. Placeholders in {braces} come from the news desk. The writing model's settings are in press.json. House style: a small-town paper that reports blocky everyday life with complete seriousness. Never cruel, never gory, suitable for all ages. 'tones': house templates for the Roast and the Chronicle, by story kind; any kind missing there uses 'stories'.",
+	"stories": {
+		"death": {
+			"headlines": [
+				"{player} Back on Their Feet After Brief Death",
+				"Local Resident Dies, Returns, Declines to Comment",
+				"Tragedy, Briefly, for {player}",
+				"{player} Respawns; Dignity Still Missing"
+			],
+			"bodies": [
+				"{player} {cause} this week, according to the official notice. Witnesses say the setback lasted only a moment before {player} reappeared in bed, somewhat lighter in the pockets. Friends describe the mood as philosophical.",
+				"In news that surprised nobody who knows them, {player} {cause}. The Observer understands they have since respawned and are said to be retracing their steps with great care and some muttering.",
+				"Officials confirmed on Day {day} that {player} {cause}. The incident is being treated as a learning experience. A spokesperson for {player} asked that the matter be left there."
+			]
+		},
+		"deaths": {
+			"headlines": [
+				"{player} Dies {count} Times; Insists Things Are Going Well",
+				"Safety Officials Concerned About {player}",
+				"{count} Deaths, Zero Regrets: {player} Speaks Out",
+				"Respawn Point Reports Busiest Week Yet, Thanks to {player}"
+			],
+			"bodies": [
+				"{player} died {count} times this week, most recently when they {cause}. Each time they returned in good spirits. The Observer has asked the town to keep an eye on {player}, for their sake and for the sake of their belongings.",
+				"It has been a difficult stretch for {player}, who recorded {count} deaths since the last edition. The latest notice says {player} {cause}. A neighbour said simply: \"Again?\"",
+				"With {count} deaths to their name this week, {player} now holds the town's unofficial record for coming back. Their most recent setback: {player} {cause}. They are reported to be fine, and looking for their stuff."
+			]
+		},
+		"advancement.task": {
+			"headlines": [
+				"{player} Completes \"{title}\"",
+				"Milestone for {player}: \"{title}\"",
+				"\"{title}\": {player} Ticks Another Box"
+			],
+			"bodies": [
+				"{player} has earned the advancement \"{title}\". The achievement is described as follows: {detail}. Modest as ever, {player} is reported to have carried on as if nothing had happened.",
+				"Congratulations are in order for {player}, who this week completed \"{title}\" ({detail}). The Observer notes that every great career begins with small steps, and this was one of them.",
+				"Records show that {player} earned \"{title}\" on Day {eventday}. Asked about it, onlookers agreed it had definitely happened."
+			]
+		},
+		"advancement.goal": {
+			"headlines": [
+				"{player} Reaches Goal: \"{title}\"",
+				"A Proud Day for {player}",
+				"\"{title}\" - {player} Makes It Official"
+			],
+			"bodies": [
+				"In a notable step forward, {player} has achieved \"{title}\": {detail}. Long-time residents call it a sign that {player} is going places, most of them dangerous.",
+				"The town has a new achiever. {player} completed the goal \"{title}\" this week, an accomplishment described as: {detail}. Celebrations were brief, as is customary.",
+				"{player} can now add \"{title}\" to their record. The goal ({detail}) is one many residents talk about and few attempt. The Observer offers its warmest congratulations."
+			]
+		},
+		"advancement.challenge": {
+			"headlines": [
+				"HISTORIC: {player} Conquers \"{title}\"",
+				"{player} Achieves the Near-Impossible",
+				"Town Stunned as {player} Completes \"{title}\""
+			],
+			"bodies": [
+				"In what may be remembered as the event of the year, {player} has completed the challenge \"{title}\": {detail}. The Observer stops the presses for very few things. This is one of them.",
+				"Residents are still talking about {player}, who this week earned the rare challenge \"{title}\". The task, described as \"{detail}\", has defeated many before them. A statue is being discussed.",
+				"Few will ever complete \"{title}\". {player} did. The challenge ({detail}) was completed on Day {eventday}, and the town has not been the same since."
+			]
+		},
+		"boss": {
+			"headlines": [
+				"{player} DEFEATS THE {mob}",
+				"The {mob} Falls; {player} Stands Victorious",
+				"Extra! Extra! {player} Takes Down the {mob}"
+			],
+			"bodies": [
+				"The Observer can confirm that {player} has defeated the {mob}. Those who have faced it before rarely talk about it. {player} is now expected to talk about little else.",
+				"After what witnesses would surely have called an epic struggle, had there been any witnesses, {player} emerged victorious over the {mob}. The town extends its gratitude and asks {player} to wipe their boots.",
+				"Word reached the newsroom this week that the {mob} has been beaten by {player}. Historians are already arguing over what it means. Most agree it means {player} is very good at this."
+			]
+		},
+		"hunter": {
+			"headlines": [
+				"{player} Clears {count} Creatures From the Wilds",
+				"{mobs} Advised to Avoid {player}",
+				"Public Safety Award for {player}",
+				"{player} Defeats {mobcount} {mobs}; Wilds Noticeably Quieter"
+			],
+			"bodies": [
+				"The roads are safer this week thanks to {player}, who dealt with {count} creatures, {mobcount} of them {mobs}. The town watch has asked whether {player} would consider a uniform.",
+				"{player} has defeated {count} creatures since the last edition. The {mobs} were hit hardest, losing {mobcount} of their number. Their representatives could not be reached for comment.",
+				"Night-time travel is once again possible, according to residents, after {player} defeated {count} creatures in a single week. {mobs} accounted for {mobcount} of them."
+			]
+		},
+		"miner": {
+			"headlines": [
+				"{player} Mines {count} Blocks; Ground Visibly Lower",
+				"Industry Booms as {player} Digs In",
+				"{player} Moves Earth, Literally",
+				"Local Miner {player} Hits {count}"
+			],
+			"bodies": [
+				"{player} mined {count} blocks this week, {blockcount} of them {block}. Geologists describe the result as \"a lot of holes\". {player} is said to be pleased with progress.",
+				"The mining sector reports a record week thanks to {player}, who extracted {count} blocks. {block} led the way with {blockcount}. Neighbours have asked for advance warning of any further digging.",
+				"Residents report the sound of steady picking from deep below, and the Observer can now confirm the source: {player}, who mined {count} blocks since the last edition, mostly {block}."
+			]
+		},
+		"miner.rare": {
+			"headlines": [
+				"{player} Strikes It Rich",
+				"Precious Find Deep Underground for {player}",
+				"{player}'s Pickaxe Pays Off",
+				"Fortune Favours {player}"
+			],
+			"bodies": [
+				"After mining {count} blocks this week, {player} has turned up {haul}. Jewellers across the land are said to be very interested. {player} declined to share the location.",
+				"Patience has paid off for {player}, whose {count} blocks of mining produced {haul}. Experts recommend {player} invest in a good chest and a better lock.",
+				"It was a week of {block} ({blockcount} blocks) for {player}, right up until it wasn't: the digging also uncovered {haul}. The Observer congratulates {player} on their good fortune."
+			]
+		},
+		"builder": {
+			"headlines": [
+				"{player} Places {count} Blocks; Skyline Changes",
+				"Construction Boom Credited to {player}",
+				"Planning Office Swamped by {player}"
+			],
+			"bodies": [
+				"{player} placed {count} blocks this week, favouring {block}. Whether the result is a house, a tower or something still undecided, the town agrees it is certainly larger than before.",
+				"The construction sector is thriving thanks to {player}, who laid {count} blocks since the last edition. {block} was the material of choice. The planning office has not been consulted and does not exist.",
+				"Builders are rarely celebrated, but the Observer makes an exception for {player}: {count} blocks placed, much of it {block}. Residents look forward to finding out what it is."
+			]
+		},
+		"engineer": {
+			"headlines": [
+				"{player} Wires Up the Town",
+				"Pistons Fire as {player} Gets to Work",
+				"{player} Builds a Machine; Purpose Unclear"
+			],
+			"bodies": [
+				"{player} placed {count} pieces of redstone this week, {part} above all. Residents report clicking, whirring and the occasional piston where no piston was before. What it does has not yet been announced.",
+				"The town's engineering sector is a one-resident operation, and that resident is {player}: {count} pieces of redstone machinery placed since the last edition, {part} above all. The Observer has asked what the machine is for and is awaiting a reply.",
+				"Something is ticking at {player}'s place. The Observer can confirm {count} pieces of redstone, {part} above all, and a great deal of muttering about timings."
+			]
+		},
+		"traveller": {
+			"headlines": [
+				"{player} Covers {km} km; Maps Updated",
+				"Travel Desk: {player} Goes the Distance",
+				"{player} Seen Everywhere, Briefly",
+				"Explorer {player} Logs {km} km"
+			],
+			"bodies": [
+				"{player} travelled {km} km this week, mostly {mode}. Cartographers report they are struggling to keep up. When asked where they were going, {player} was already gone.",
+				"Wanderlust has a name, and it is {player}. Over {km} km covered since the last edition, largely {mode}, with no sign of slowing down. Their boots were unavailable for comment.",
+				"Few residents saw much of {player} this week, and with good reason: they covered {km} km, mostly {mode}. The Observer wishes them fair weather and few ravines."
+			]
+		},
+		"farmer": {
+			"headlines": [
+				"Bumper Week on the Farm for {player}",
+				"{player} Named Farmer of the Week",
+				"Agriculture Thrives Under {player}"
+			],
+			"bodies": [
+				"{player} bred {bred} animals, caught {fish} fish and harvested {crops} crops this week. The town's dinner tables have never looked better. Several animals are reported to be nervous.",
+				"It has been a productive season for {player}: {crops} crops brought in, {bred} animals bred and {fish} fish landed. Market traders are delighted. The cows have mixed feelings.",
+				"Hard work in the fields has paid off for {player}, with {crops} crops harvested since the last edition. Add {bred} animals bred and {fish} fish caught, and the result is the Observer's Farmer of the Week."
+			]
+		},
+		"trader": {
+			"headlines": [
+				"{player} Completes {count} Trades; Villagers Hmm Approvingly",
+				"Business Is Booming for {player}",
+				"Markets Up as {player} Trades {count} Times"
+			],
+			"bodies": [
+				"{player} completed {count} trades with villagers this week. Local merchants describe them as a fair customer who drives a hard bargain. One villager was heard to say \"hmm\" in what sounded like respect.",
+				"The village economy owes a debt to {player}, who made {count} trades since the last edition. Emerald prices are being watched closely. The Observer accepts no responsibility for any inflation.",
+				"Commerce is alive and well. {player} has struck {count} deals with the village's traders, who are said to be quietly delighted and slightly richer."
+			]
+		},
+		"feud": {
+			"headlines": [
+				"Tensions Rise as {player} Wins {count} Duels",
+				"Crime Desk: {player} Under Suspicion",
+				"{player} Settles Disputes the Hard Way"
+			],
+			"bodies": [
+				"The town watch is investigating reports that {player} came out on top in {count} encounters with fellow residents. Everyone involved has since respawned. Talks are said to be ongoing.",
+				"Neighbourly relations took a turn this week as {player} won {count} disputes with other players. The Observer urges calm, and reminds readers that most problems can be solved with a polite sign.",
+				"{player} has been named in connection with {count} defeated rivals. No charges have been filed, mostly because there is nobody to file them with."
+			]
+		},
+		"raid": {
+			"headlines": [
+				"{player} Saves the Village",
+				"Raiders Repelled; {player} Hailed a Hero",
+				"Bells Ring for {player}"
+			],
+			"bodies": [
+				"When raiders came, {player} answered. The village is safe this week thanks to their efforts, and the villagers have expressed their thanks in the only way they know: by raising their prices slightly less than usual.",
+				"A raid on a village was turned back this week by {player}. The Observer understands the attackers left in a hurry, and in fewer numbers than they arrived.",
+				"Heroism is alive and well. {player} defended a village from raiders this week, and the bells are still ringing. The village has declared {player} welcome any time."
+			]
+		},
+		"breaker": {
+			"headlines": [
+				"{player} Wears Out {count} Tools",
+				"Toolmakers Thank {player} for Their Business",
+				"Another {tool} Lost to {player}'s Ambition"
+			],
+			"bodies": [
+				"{player} has worn out {count} tools since the last edition, the {tool} suffering most. Blacksmiths report record demand. The tools themselves were not available for comment.",
+				"It has been a hard week for tools in the household of {player}: {count} have been worn through, most often the {tool}. Some say this is the mark of a hard worker. Others say it is the mark of a lot of stone.",
+				"The Observer notes, with some respect, that {player} has worn out {count} tools this week. The {tool} saw the most use, and the least retirement."
+			]
+		},
+		"insomniac": {
+			"headlines": [
+				"{player} Has Not Slept in {hours} Hours",
+				"Health Desk: Has Anyone Seen {player} Sleep?",
+				"Phantoms Take an Interest in {player}"
+			],
+			"bodies": [
+				"{player} has been awake for {hours} hours of play without once sleeping in a bed. Doctors recommend rest. Phantoms recommend the opposite. The Observer sides with the doctors.",
+				"Friends are worried about {player}, who has not used a bed since the last edition despite {hours} hours on the go. A bed costs three wool and some planks, the Observer points out helpfully.",
+				"The Health Desk has received a report about {player}, who has gone {hours} hours without sleeping in a bed. Residents are asked to leave a bed somewhere obvious."
+			]
+		},
+		"jumper": {
+			"headlines": [
+				"{player} Jumps {count} Times; Experts Puzzled",
+				"Sport: {player} in Peak Condition",
+				"Ground Reports Constant Contact From {player}"
+			],
+			"bodies": [
+				"{player} jumped {count} times this week. Nobody is quite sure why. Sports analysts call it \"enthusiastic\". The ground calls it \"a lot\".",
+				"In sport, {player} recorded {count} jumps since the last edition, a figure that would surely impress any rabbit. The Observer wishes their knees the very best.",
+				"Residents near {player} report frequent bouncing. Official figures put it at {count} jumps. No complaints have been filed, but several eyebrows have been raised."
+			]
+		},
+		"cake": {
+			"headlines": [
+				"{player} Eats {count} Slices of Cake",
+				"Food Desk: {player} Celebrates Something, Probably",
+				"Bakers Rejoice as {player} Clears {count} Slices"
+			],
+			"bodies": [
+				"{player} ate {count} slices of cake this week. The Observer does not ask what the occasion was. The Observer is simply happy for {player}.",
+				"The Food Desk salutes {player}, who has eaten {count} slices of cake since the last edition. Nutritionists have questions. Bakers do not.",
+				"{count} slices of cake were eaten by {player} this week. Whether it was a birthday, a celebration or a Tuesday, the town wishes them many happy returns."
+			]
+		},
+		"newcomer": {
+			"headlines": [
+				"Welcome to Town, {player}",
+				"New Face in the Neighbourhood: {player}",
+				"{player} Moves In"
+			],
+			"bodies": [
+				"The Observer is pleased to welcome {player}, who arrived in the world since the last edition. Residents are encouraged to say hello, and to keep an eye on their chests until introductions are complete.",
+				"A new resident has joined us: {player}. The Observer hopes they find the place to their liking, and reminds them that creepers are not friendly, no matter how they look at you.",
+				"Please give a warm welcome to {player}, the newest member of the community. Early reports suggest they are settling in well and have already punched at least one tree."
+			]
+		},
+		"quiet": {
+			"headlines": [
+				"Quiet Week in Town",
+				"Nothing Happens; Residents Relieved",
+				"All Calm, Says Observer"
+			],
+			"bodies": [
+				"The Observer is pleased to report a quiet week. No great deeds, no great disasters, and not a single resident blown up that we know of. The editor took the opportunity to tidy the office.",
+				"Nothing of note happened this week, and the Observer could not be happier about it. Readers are encouraged to go and do something worth printing.",
+				"Our reporters searched high and low for news this week and found only peace and quiet. The Observer will be back next edition, hopefully with something to say."
+			]
+		},
+		"first": {
+			"headlines": [
+				"A First for {player}",
+				"{player} Reaches a Milestone",
+				"Never Before: {player} Breaks New Ground",
+				"History Made, Quietly, by {player}"
+			],
+			"bodies": [
+				"Every resident remembers their firsts, and this week it was the turn of {player}, who {fact} for the first time. The Observer notes the date for the history books, which we are fairly sure we keep.",
+				"It is not every week that the Observer can report a first, but {player} has obliged: they {fact} for the first time. Friends describe the moment as long overdue.",
+				"Mark it on the calendar. {player} {fact} for the very first time this week, and the town is, frankly, delighted. More, we are told, is to come."
+			]
+		},
+		"pursuit.new": {
+			"headlines": [
+				"{player} Takes Up a New Pastime",
+				"A New Hobby for {player}",
+				"{player} Tries Something Different"
+			],
+			"bodies": [
+				"Residents who thought they knew {player} have been surprised this week. The figures show {amount} {measure}, from someone who had barely tried it before. A new chapter, it seems, has begun.",
+				"Nobody saw it coming, least of all the Observer: {player} has taken up a new pursuit, with {amount} {measure} since the last edition. Experts say it is the start of something.",
+				"Variety is the spice of life, and {player} has discovered a new flavour: {amount} {measure} this week, against next to none before. The Observer wishes them well in their new venture."
+			]
+		},
+		"pursuit.record": {
+			"headlines": [
+				"Record Week for {player}",
+				"{player} Outdoes Themselves",
+				"{player}: Busiest Week Yet"
+			],
+			"bodies": [
+				"It was a week to remember for {player}, who recorded {amount} {measure}, against a usual {usual}. Whatever has got into them, the town would like some too.",
+				"Figures released this week show {player} at {amount} {measure}. Their usual is nearer {usual}. Observers describe the effort as tireless, and the results as plain to see.",
+				"{player} has broken their own record: {amount} {measure} since the last edition, when a normal week brings about {usual}. The Observer salutes the dedication."
+			]
+		},
+		"bounty": {
+			"headlines": [
+				"{player} Answers the Call",
+				"Exchange Bounty Settled by {player}",
+				"{player} Comes Through for {who}"
+			],
+			"bodies": [
+				"When {who} asked for help in the Exchange, {player} answered: they {deed}. The bounty has been paid in full, and the gratitude is said to be considerable.",
+				"The Exchange board has one fewer notice on it this week, thanks to {player}, who {deed} for {who}. Neighbourliness, the Observer notes, is alive and well.",
+				"{who} is a happy customer this week. {player} {deed}, settling the bounty well before the deadline. The Observer encourages readers to check the Exchange for more work."
+			]
+		}
+	},
+	"opinions": [
+		{
+			"headline": "Editorial: It Is Time We Talked About Gravel",
+			"body": "Every resident has a gravel story. You dig up, it falls down. You dig across, it falls down anyway. The Observer does not ask for much. We ask only that gravel be held to the same standards as every other block, and stay where it is put."
+		},
+		{
+			"headline": "Opinion: Should Creepers Be Required to Knock?",
+			"body": "Other visitors knock. Villagers mumble. Even zombies groan as they approach. The creeper alone arrives in perfect silence, hisses once, and redesigns your front wall. The Observer believes a simple knock would go a long way."
+		},
+		{
+			"headline": "Letters: A Reader Writes About the Moon",
+			"body": "\"Sir, I have noticed the moon is square. My mother noticed it, and her mother before her. Nobody else seems bothered. Am I alone?\" The Observer replies: you are not alone, but you are outnumbered. We suggest admiring it anyway."
+		},
+		{
+			"headline": "Editorial: In Praise of the Humble Torch",
+			"body": "It asks for a stick and a little coal. It lights the way, keeps the monsters at bay and never complains. This week the Observer raises a glass to the torch, the quiet hero of every mine shaft in the land."
+		},
+		{
+			"headline": "Opinion: The Case Against Leaving Doors Open",
+			"body": "It takes no time at all to close a door, and yet open doors remain the town's greatest source of unexpected guests. The Observer does not wish to name names. The Observer simply notes that zombies cannot open iron ones."
+		},
+		{
+			"headline": "Advice Column: Ask the Editor",
+			"body": "\"Dear Editor, a villager keeps staring at me. What should I do?\" Answer: Nothing. Villagers stare at everyone. It is how they show they care, or possibly how they decide what to charge you. Either way, smile and keep walking."
+		},
+		{
+			"headline": "Editorial: Why Do We Keep Building on Lava?",
+			"body": "The Observer has lost count of the number of residents who have lost a full set of tools to a single careless step. Lava does not negotiate. Lava does not forgive. Lava, the Observer suggests, is best admired from a distance."
+		},
+		{
+			"headline": "Opinion: Let Us Be Kinder to Chickens",
+			"body": "They lay eggs without being asked. They wander harmlessly. They ask nothing of us but a little seed. And yet chickens remain the town's most overlooked residents. The Observer calls for a week of chicken appreciation."
+		},
+		{
+			"headline": "Letters: On the Subject of Beds",
+			"body": "\"Sir, I put my bed in the Nether to save time and it went badly. Should I have been warned?\" The Observer replies: you are now warned, as are all our readers. Beds belong in the Overworld, and nowhere else."
+		},
+		{
+			"headline": "Editorial: A Modest Proposal Regarding Endermen",
+			"body": "The Observer asks only this of our tall neighbours: if you must take a block, please take one from somewhere that is not the middle of somebody's house. We have also stopped looking them in the eye, which is helping."
+		}
+	],
+	"classifieds": [
+		"FOR SALE: Anvil, slightly used, only dropped on one person.",
+		"WANTED: Honest villager. Must not charge 32 emeralds for a book.",
+		"LOST: Full set of iron tools, near lava. If found, please do not bother.",
+		"FREE TO GOOD HOME: One gravel. Will fall into place.",
+		"SEEKING: Tall gentleman who borrowed a block from my wall. Please return. No eye contact needed.",
+		"FOR HIRE: Experienced torch-placer. Mines, caves, emotional support.",
+		"FOUND: One saddle. Owner may identify by describing the pig.",
+		"FOR SALE: Map of the area. Some of the area. A bit of the area.",
+		"WANTED: Cat for creeper deterrence. Must enjoy sitting on chests.",
+		"NOTICE: The well is not a portal. Please stop jumping in.",
+		"FOR SALE: Bed, barely slept in. Phantoms included at no extra cost.",
+		"LESSONS: Learn to fish in one afternoon. Junk catches refunded in junk.",
+		"WANTED: Volunteers for the night watch. Armour provided, courage not.",
+		"FOR SALE: Pumpkin pie, homemade, one bite missing.",
+		"PERSONAL: Snow golem seeks warm companion. Must not be warm.",
+		"REWARD: For the safe return of my horse. Answers to nothing. Has never answered.",
+		"FOR SALE: Boat. Has been up a waterfall twice. Ask about the third time.",
+		"WANTED: Someone to explain redstone to me. Slowly. Twice.",
+		"FOR RENT: Cosy dirt hut, open plan, fully ventilated by previous explosion.",
+		"NOTICE: The town would like its bell back.",
+		"FOR SALE: Compass. Points home. Not to your home. To a home.",
+		"WANTED: Strong arms to help move a chest of cobblestone. Fourteen chests of cobblestone.",
+		"FOUND: Diamond pickaxe, nearly broken. Owner must answer for what they did to it.",
+		"LOST: My sense of direction, somewhere near the Nether. Reward offered.",
+		"FOR SALE: Spare elytra wings. Flapping not included.",
+		"ADVICE: Never dig straight down. This advice was printed for free.",
+		"FOR SALE: Bucket of milk. Cures most things. Not feelings.",
+		"WANTED: Quiet neighbour. Must not own a note block.",
+		"NOTICE: Sheep may now be any colour. Please stop staring at the pink one.",
+		"CLASSES: Basic farming. Learn which end of the hoe to hold."
+	],
+	"outlooks": [
+		"Creeper outlook: scattered, with a chance of surprise.",
+		"Skeleton activity: moderate. Bring a shield.",
+		"Phantom warning in effect for anyone who has not slept.",
+		"Zombie traffic heavy after dark. Allow extra time.",
+		"Slime levels high in the swamps. Bouncy conditions.",
+		"Endermen: calm, provided nobody looks at them.",
+		"Spider sightings expected on walls, ceilings and in dreams.",
+		"Drowned reported near rivers. Swim with company."
+	],
+	"links": {
+		"death": [
+			"There was a sting in the tail, however: on day {day}, {player} {how}.",
+			"Not everything went to plan. On day {day}, {player} {how}.",
+			"The week also had its low point, when {player} {how} on day {day}.",
+			"Friends note that on day {day} {player} also {how}, and suggest the two may be connected."
+		],
+		"rival": [
+			"The {mobs} did not go quietly, and sent {player} back to bed {times} {period}.",
+			"It was not entirely one-sided: {player} lost to the {mobs} {times} {period}.",
+			"The {mobs} will point out, quietly, that they got the better of {player} {times} {period}.",
+			"Honours were not quite even. The {mobs} claimed {player} {times} {period}."
+		],
+		"sameday": [
+			"Day {day} turned out to be a day of highs and lows: {player} also {cause}.",
+			"The celebrations of day {day} were cut short when {player} {cause}.",
+			"Day {day} was eventful in other ways too, as {player} {cause}."
+		],
+		"death.death": [
+			"It had been a good week until then: {player} {deed}.",
+			"The timing was cruel, too: the same week, {player} {deed}.",
+			"Friends point out that {player} {deed} that very week, and suggest the two may be connected."
+		],
+		"sameday.death": [
+			"It was a day of highs and lows: {player} had also {deed}.",
+			"Earlier the same day, {player} {deed}."
+		]
+	},
+	"tones": {
+		"roast": {
+			"death": {
+				"headlines": [
+					"{player} Dies; Nobody Surprised",
+					"Day {day}: {player} Finds a New Way to Lose"
+				],
+				"bodies": [
+					"{player} {cause} on day {day}. Witnesses describe the moment as \"entirely avoidable\" and \"honestly a bit embarrassing\". {player} has respawned and is pretending it never happened.",
+					"In a move nobody saw coming except everyone, {player} {cause}. The Observer has sent flowers, and a map, and a strongly worded leaflet on staying alive."
+				]
+			},
+			"deaths": {
+				"headlines": [
+					"{player} Dies {count} Times, Somehow",
+					"Respawn Point Asks {player} for Some Space"
+				],
+				"bodies": [
+					"{player} died {count} times this week, most recently when they {cause}. The bed they keep waking up in has asked for a break. So has the town.",
+					"Statisticians had to recount, but it is true: {player} died {count} times. The last one: they {cause}. At this point it is less a mishap and more a lifestyle."
+				]
+			},
+			"advancement.task": {
+				"headlines": [
+					"{player} Completes \"{title}\"; Wants a Medal",
+					"\"{title}\": {player} Finally Gets There"
+				],
+				"bodies": [
+					"{player} earned \"{title}\" on day {eventday}. The advancement asks you to {detail}, which is the sort of thing most residents manage by accident. Still, well done. We suppose.",
+					"Hold the front page, gently: {player} has completed \"{title}\". It took them until day {eventday}. The Observer is proud, in the way one is proud of a cat that found its food bowl."
+				]
+			},
+			"advancement.goal": {
+				"headlines": [
+					"{player} Achieves \"{title}\", Tells Everyone",
+					"Against All Odds, {player} Gets \"{title}\""
+				],
+				"bodies": [
+					"{player} has reached the goal \"{title}\" ({detail}). Neighbours report hearing about it four times before breakfast. It is a genuine achievement, and they will not let you forget it.",
+					"Nobody had money on it, but {player} has earned \"{title}\". The task: {detail}. The town's betting pool has been dissolved in embarrassment."
+				]
+			},
+			"advancement.challenge": {
+				"headlines": [
+					"{player} Beats \"{title}\"; Ego Now Visible From Orbit",
+					"\"{title}\" Falls to {player}, Who Is Insufferable About It"
+				],
+				"bodies": [
+					"On day {eventday}, {player} completed the challenge \"{title}\": {detail}. It is a serious feat, and the Observer reports it with a straight face that is costing us a great deal.",
+					"{player} has done the hard one: \"{title}\" ({detail}). We would congratulate them properly, but they are already congratulating themselves at a volume that makes it unnecessary."
+				]
+			},
+			"boss": {
+				"headlines": [
+					"{player} Defeats the {mob}, Becomes Unbearable",
+					"{mob} Down; {player}'s Head Now Too Big for Doors"
+				],
+				"bodies": [
+					"{player} has defeated the {mob}. It is a truly heroic deed, and the Observer would like to say so before {player} says it again, louder.",
+					"The {mob} has been defeated by {player}, who is now accepting compliments, autographs and, we are told, the occasional parade. The {mob} could not be reached for comment, for obvious reasons."
+				]
+			},
+			"hunter": {
+				"headlines": [
+					"{player} Defeats {count} Creatures; Wildlife Files Complaint",
+					"{mobs} Hold Emergency Meeting About {player}"
+				],
+				"bodies": [
+					"{player} defeated {count} creatures this week, {mobcount} of them {mobs}. The {mobs} have asked for a restraining order. The Observer has asked {player} whether everything is all right at home.",
+					"{count} creatures fell to {player} this week, including {mobcount} {mobs}. That is not hunting. That is a grudge. We hope whatever the {mobs} did is now forgiven."
+				]
+			},
+			"miner": {
+				"headlines": [
+					"{player} Digs {count} Blocks, Still Hasn't Found a Personality",
+					"{player} Mines {count} Blocks; Sunlight Now a Rumour"
+				],
+				"bodies": [
+					"{player} mined {count} blocks this week, {blockcount} of them {block}. Friends say they have not seen daylight in days and have started talking to the stone. The stone, to its credit, listens.",
+					"Another riveting week underground for {player}: {count} blocks mined, mostly {block} ({blockcount}). The town has started a collection to buy them a window."
+				]
+			},
+			"miner.rare": {
+				"headlines": [
+					"{player} Finds Treasure, Will Not Stop Talking About It",
+					"{player} Strikes It Rich; Humility Not Found"
+				],
+				"bodies": [
+					"{player} mined {count} blocks this week and, in a rare moment of luck, found something worth having: {haul}. They have mentioned it to everyone. Twice.",
+					"After {count} blocks of digging, {player} finally hit the good stuff: {haul}. Neighbours have been told about every single one, in detail, at length."
+				]
+			},
+			"builder": {
+				"headlines": [
+					"{player} Places {count} Blocks; Architects Weep",
+					"{player} Builds Something. Opinions Differ"
+				],
+				"bodies": [
+					"{player} placed {count} blocks this week, most of them {block}. Whether the result is a house, a monument or a cry for help is still being debated by the town council.",
+					"With {count} blocks placed, mostly {block}, {player} has changed the skyline forever. The Observer will not say for better or worse. The Observer is being polite."
+				]
+			},
+			"engineer": {
+				"headlines": [
+					"{player} Builds a Machine Nobody Asked For",
+					"{player}'s Contraption Clicks; Neighbours Do Not Sleep"
+				],
+				"bodies": [
+					"{player} placed {count} pieces of redstone this week, {part} above all. It clicks, it whirs, and on a good day it opens a door. The Observer has seen simpler solutions, such as a door.",
+					"With {count} pieces of redstone placed, mostly {part}, {player} has built a machine. It is either a sorting system or a very loud clock. {player} will not say, which suggests they are not sure either."
+				]
+			},
+			"traveller": {
+				"headlines": [
+					"{player} Travels {km} km, Still Lost",
+					"{player} Covers {km} km Avoiding Responsibilities"
+				],
+				"bodies": [
+					"{player} travelled {km} km this week, mostly {mode}. When asked where they were going, they said \"somewhere\", which is not a place. Maps have been left on their doorstep. Hint, hint.",
+					"{km} km travelled, mostly {mode}, and {player} still cannot find the way home without asking. The Observer admires the stamina, if not the sense of direction."
+				]
+			},
+			"farmer": {
+				"headlines": [
+					"{player} Farms Very Hard, Wants Applause",
+					"{player}'s Big Farming Week: A Report Nobody Asked For"
+				],
+				"bodies": [
+					"{player} harvested {crops} crops, bred {bred} animals and caught {fish} fish this week. The animals look nervous. The fish were not consulted. {player} would like you to know they are basically a farmer now.",
+					"Numbers from the farm of {player}: {crops} crops, {bred} animals bred and {fish} fish caught. The Observer is moved. Slightly. It might be the hay fever."
+				]
+			},
+			"trader": {
+				"headlines": [
+					"{player} Trades {count} Times; Villagers Hide",
+					"{player} Haggles {count} Times, Wins Nothing"
+				],
+				"bodies": [
+					"{player} traded with villagers {count} times this week. The villagers have started closing their shutters when they see them coming. Business is business, but this is a lot of business.",
+					"{count} trades in a single week. {player} now knows every villager's name, prices and, we suspect, their secrets. The villagers are said to be considering a union."
+				]
+			},
+			"feud": {
+				"headlines": [
+					"{player} Picks Fights; Town Sighs",
+					"Neighbourly Relations at an All-Time Low, Thanks to {player}"
+				],
+				"bodies": [
+					"{player} has been involved in {count} scuffles with fellow residents this week. The Observer reminds everyone that this is a town, not an arena, and that someone has to clean up afterwards.",
+					"{count} fights, one {player}. The Observer would like to introduce {player} to two revolutionary ideas: talking, and walking away."
+				]
+			},
+			"raid": {
+				"headlines": [
+					"{player} Wins a Raid, Bores Everyone With It",
+					"Raiders Routed; {player} Unbearable"
+				],
+				"bodies": [
+					"{player} fought off a raid on the village. The villagers are grateful, and somewhat tired of hearing the story, which grows each time it is told.",
+					"The raiders came, and {player} sent them packing. A brave deed, and the Observer says so through gritted teeth, because {player} is standing right behind us."
+				]
+			},
+			"breaker": {
+				"headlines": [
+					"{player} Breaks {count} Tools; Smiths Rejoice",
+					"{player} Wears Out {count} Tools, Possibly On Purpose"
+				],
+				"bodies": [
+					"{player} wore out {count} tools this week, the {tool} hardest hit. The local smiths are delighted. Their accountants are delighted. Everyone else is quietly concerned.",
+					"{count} tools have given their lives for {player} this week, the {tool} chief among them. The Observer has started a memorial fund. Donations of iron welcome."
+				]
+			},
+			"insomniac": {
+				"headlines": [
+					"{player} Refuses Sleep; Phantoms Take Notes",
+					"{player} Awake {hours} Hours, Making Poor Choices"
+				],
+				"bodies": [
+					"{player} has been awake for {hours} hours of play without a single night in bed. The phantoms are thrilled. The bed is offended. The rest of us are worried.",
+					"{hours} hours without sleep. {player} insists they are fine. {player} is not fine. Somebody please tuck them in before the phantoms do it for us."
+				]
+			},
+			"jumper": {
+				"headlines": [
+					"{player} Jumps {count} Times; Knees Lodge Complaint",
+					"Is {player} All Right? {count} Jumps Suggest Not"
+				],
+				"bodies": [
+					"{player} jumped {count} times this week. Nobody knows why. Nobody has dared to ask. The ground is said to be exhausted.",
+					"{count} jumps in a week. Experts are divided on whether {player} is training for something or simply cannot stand still. The Observer leans towards the second."
+				]
+			},
+			"cake": {
+				"headlines": [
+					"{player} Eats {count} Slices of Cake, Defends Choices",
+					"Cake Shortage Linked to {player}"
+				],
+				"bodies": [
+					"{player} ate {count} slices of cake this week, and would like it known that this is a balanced diet. The bakers are delighted. The doctors are drafting a letter.",
+					"Where did the cake go? The Observer can reveal: {count} slices went to {player}. No further questions. Please pass the cake."
+				]
+			},
+			"newcomer": {
+				"headlines": [
+					"New Resident {player} Arrives, Doesn't Know What They're In For",
+					"Welcome, {player}. Sorry in Advance"
+				],
+				"bodies": [
+					"{player} has moved into town. The Observer welcomes them and advises them, as a friend, to find the bed first and the diamonds second. Most residents get this the wrong way round.",
+					"A new face: {player} has arrived. They seem nice. Give it a week. The Observer will be watching, and so, we regret, will the creepers."
+				]
+			},
+			"quiet": {
+				"headlines": [
+					"Nothing Happened, and Frankly We're Disappointed",
+					"Residents Achieve Nothing; Observer Has Words"
+				],
+				"bodies": [
+					"Not one thing of note happened this week. Not one. The Observer has filled this space anyway, which is more effort than most residents managed.",
+					"A quiet week, if you are being kind. A lazy one, if you are the Observer. Get out there and do something we can write about."
+				]
+			},
+			"first": {
+				"headlines": [
+					"{player} Finally Does a Thing for the First Time",
+					"Late Bloomer {player} Gets There"
+				],
+				"bodies": [
+					"Some residents do it on day one. {player} has done it now: they {fact} for the first time. Better late than never, which is what we will put on the plaque.",
+					"Milestone alert: {player} {fact} for the first time. The town is proud, in a slightly patronising way, which is the best kind."
+				]
+			},
+			"pursuit.new": {
+				"headlines": [
+					"{player} Has a New Hobby; Everyone Has Been Told",
+					"{player} Discovers {measure}, Becomes Expert Overnight"
+				],
+				"bodies": [
+					"{player} recorded {amount} {measure} this week, a brand new pastime. Give it a fortnight and they will be giving lectures on it. Nobody will attend.",
+					"{amount} {measure}, out of nowhere. {player} has found a new obsession, and the rest of the town has found a new thing to avoid talking about at dinner."
+				]
+			},
+			"pursuit.record": {
+				"headlines": [
+					"{player} Smashes Own Record; Ego Follows",
+					"{player} Overdoes It, Spectacularly"
+				],
+				"bodies": [
+					"{player} managed {amount} {measure} this week, against a usual {usual}. Impressive, or worrying, depending on who you ask. We asked their bed. Their bed said worrying.",
+					"A personal best for {player}: {amount} {measure}, when {usual} is normal. Somebody check on them. Then check on whoever had to watch."
+				]
+			},
+			"bounty": {
+				"headlines": [
+					"{player} Helps {who}, Mostly for the Money",
+					"{who} Gets Help From {player}; Payment Very Much Expected"
+				],
+				"bodies": [
+					"{who} put a notice in the Exchange and {player} answered: they {deed}. A selfless act, apart from the reward, which {player} collected before the ink was dry.",
+					"Community spirit, or a good price? {player} {deed} for {who}. The Observer assumes both, and admires the efficiency."
+				]
+			}
+		},
+		"chronicle": {
+			"death": {
+				"headlines": [
+					"The Fall of {player}",
+					"A Hero's Setback on Day {day}"
+				],
+				"bodies": [
+					"On day {day}, {player} {cause}. Yet heroes do not stay fallen: by morning {player} rose again, wiser and only a little poorer, and the tale goes on.",
+					"Let it be written that {player} {cause}. Every legend has its dark chapter, and this was theirs. The bards say the comeback will be worth the wait."
+				]
+			},
+			"deaths": {
+				"headlines": [
+					"{player} and the {count} Falls",
+					"The Unbreakable {player}"
+				],
+				"bodies": [
+					"{count} times did {player} fall this week, the last when they {cause}. {count} times they rose again. Such is the stubborn courage of which ballads are made.",
+					"Death claimed {player} {count} times, most lately when they {cause}. Death, it seems, has met its match: {player} keeps coming back for more."
+				]
+			},
+			"advancement.task": {
+				"headlines": [
+					"The Deed of {player}: \"{title}\"",
+					"{player} Wins \"{title}\""
+				],
+				"bodies": [
+					"On day {eventday}, {player} achieved \"{title}\": {detail}. A small step on the long road of legend, and every great journey is made of small steps.",
+					"Mark the day: on day {eventday} {player} earned \"{title}\". The task was to {detail}, and it is done. The chronicle grows by one bright line."
+				]
+			},
+			"advancement.goal": {
+				"headlines": [
+					"\"{title}\": A Goal Won by {player}",
+					"The Quest of {player} Is Fulfilled"
+				],
+				"bodies": [
+					"Long did {player} strive for it, and now \"{title}\" is theirs: {detail}. Let the halls ring with their name.",
+					"A quest fulfilled: {player} has earned \"{title}\" ({detail}). The old ones say such deeds come once a generation. The old ones say that a lot, but this time they mean it."
+				]
+			},
+			"advancement.challenge": {
+				"headlines": [
+					"The Great Challenge: {player} Conquers \"{title}\"",
+					"Legend Made: {player} and \"{title}\""
+				],
+				"bodies": [
+					"On day {eventday}, {player} faced the great challenge \"{title}\": {detail}. They did not falter. From this day the name of {player} shall be spoken with awe.",
+					"Few have dared it, fewer have done it: {player} has conquered \"{title}\" ({detail}). The chronicle sets this deed among the mightiest of the age."
+				]
+			},
+			"boss": {
+				"headlines": [
+					"{player}, Slayer of the {mob}",
+					"The {mob} Falls Before {player}"
+				],
+				"bodies": [
+					"Sing of {player}, who stood before the {mob} and did not yield. The beast is fallen, the land breathes easier, and a hero walks among us.",
+					"In an hour of terror and glory, {player} brought down the {mob}. The tale will be told around every hearth in the land for years to come."
+				]
+			},
+			"hunter": {
+				"headlines": [
+					"{player}, Bane of the {mobs}",
+					"The Long Hunt of {player}"
+				],
+				"bodies": [
+					"Through the dark hours {player} hunted, and {count} creatures fell, {mobcount} of them {mobs}. The roads are safe again, and travellers bless the name of {player}.",
+					"{count} foes vanquished, {mobcount} of them {mobs}: such is the tally of {player}'s great hunt. The night itself is said to tremble at the sound of their footsteps."
+				]
+			},
+			"miner": {
+				"headlines": [
+					"{player}, Delver of the Deep",
+					"The Halls of {player}"
+				],
+				"bodies": [
+					"Into the deep went {player}, and {count} blocks gave way before them, {blockcount} of them {block}. Like the dwarf-lords of old, they carve new halls beneath the world.",
+					"{count} blocks hewn from the earth, chiefly {block} ({blockcount}). The mountains themselves now bear the mark of {player}, delver of the deep."
+				]
+			},
+			"miner.rare": {
+				"headlines": [
+					"The Treasure of {player}",
+					"{player} Wins Riches From the Deep"
+				],
+				"bodies": [
+					"Through {count} blocks of stone {player} delved, and the deep rewarded them: {haul}. Treasure fit for a king's hoard.",
+					"Fortune favours the bold: after {count} blocks, {player} brought up {haul} from the roots of the world."
+				]
+			},
+			"builder": {
+				"headlines": [
+					"The Works of {player}",
+					"{player} Raises Great Works"
+				],
+				"bodies": [
+					"Stone upon stone, {player} raised {count} blocks this week, chiefly {block}. Great works rise in the land, and future ages will marvel at them.",
+					"With {count} blocks of {block} and more, {player} builds as the ancients built: boldly, and for the ages."
+				]
+			},
+			"engineer": {
+				"headlines": [
+					"The Engines of {player}",
+					"{player} Bends Redstone to Their Will"
+				],
+				"bodies": [
+					"In the deep places {player} laid {count} pieces of redstone, {part} above all, and the land itself began to think. Such engines are spoken of in the old songs.",
+					"With {count} pieces of redstone, {part} chief among them, {player} wrought a great engine. It hums in the dark, and none but its maker knows its purpose."
+				]
+			},
+			"traveller": {
+				"headlines": [
+					"The Wanderings of {player}",
+					"{player} Journeys {km} km"
+				],
+				"bodies": [
+					"Over hill and through valley wandered {player}, {km} km in all, mostly {mode}. Few maps reach as far as their footsteps now do.",
+					"{km} km, mostly {mode}: the road is long, and {player} walks it gladly. Tales of far places follow them home."
+				]
+			},
+			"farmer": {
+				"headlines": [
+					"The Bounty of {player}'s Fields",
+					"{player}, Keeper of the Land"
+				],
+				"bodies": [
+					"The land gave freely to {player}: {crops} crops gathered, {bred} animals born and {fish} fish drawn from the waters. A season of plenty, and a keeper worthy of it.",
+					"{crops} crops, {bred} new animals and {fish} fish: the fields and waters smile on {player}, keeper of the land."
+				]
+			},
+			"trader": {
+				"headlines": [
+					"{player}, Merchant of Renown",
+					"The Great Trading of {player}"
+				],
+				"bodies": [
+					"{count} bargains struck with the villagers this week. The name of {player} is known in every market from here to the far villages.",
+					"Gold and goods flowed through the hands of {player}: {count} trades in a single week. The merchants' guilds speak of little else."
+				]
+			},
+			"feud": {
+				"headlines": [
+					"The Feud of {player}",
+					"Strife in the Realm: {player}"
+				],
+				"bodies": [
+					"{count} times did {player} cross blades with fellow residents. Old songs warn that feuds end badly; the chronicle hopes this one ends in a feast.",
+					"Swords were drawn {count} times, and {player} stood at the heart of every quarrel. Let peace return to the realm, and soon."
+				]
+			},
+			"raid": {
+				"headlines": [
+					"{player}, Defender of the Village",
+					"The Raid Is Broken"
+				],
+				"bodies": [
+					"When the raiders came, {player} stood at the gate and would not move. The village stands, and the raiders flee into legend.",
+					"The banners of the raiders lie in the dust, and the village sings the name of {player}, its defender."
+				]
+			},
+			"breaker": {
+				"headlines": [
+					"{count} Tools Fall in {player}'s Service",
+					"The Labours of {player}"
+				],
+				"bodies": [
+					"{count} tools were worn to nothing in the great labours of {player}, the {tool} chief among them. They served nobly, and are remembered.",
+					"So hard did {player} toil that {count} tools broke beneath the work, the {tool} first among them. Such is the price of great deeds."
+				]
+			},
+			"insomniac": {
+				"headlines": [
+					"The Long Vigil of {player}",
+					"{player} Keeps the Watch"
+				],
+				"bodies": [
+					"For {hours} hours {player} has kept the watch, never once resting in a bed. The night creatures circle. The chronicle urges the hero to rest.",
+					"{hours} hours of vigil without sleep. Even heroes must rest, and the phantoms of the night grow bold when they do not."
+				]
+			},
+			"jumper": {
+				"headlines": [
+					"The Leaps of {player}",
+					"{player}, Who Would Touch the Sky"
+				],
+				"bodies": [
+					"{count} times did {player} leap towards the heavens this week. The sky has not yet been reached, but the chronicle admires the ambition.",
+					"Leap after leap, {count} in all: {player} strives ever upwards, as all great heroes must."
+				]
+			},
+			"cake": {
+				"headlines": [
+					"The Feast of {player}",
+					"{player} Holds a Great Feast"
+				],
+				"bodies": [
+					"{count} slices of cake were eaten by {player} this week, in a feast worthy of the great halls. The bakers are honoured beyond words.",
+					"Let there be feasting! {player} devoured {count} slices of cake, as heroes do between their labours."
+				]
+			},
+			"newcomer": {
+				"headlines": [
+					"A Stranger Arrives: {player}",
+					"The Coming of {player}"
+				],
+				"bodies": [
+					"A new traveller has come to the land: {player}. Every legend has a first chapter, and today theirs begins.",
+					"Out of the unknown came {player}, to make a home among us. The chronicle opens a fresh page, and waits."
+				]
+			},
+			"quiet": {
+				"headlines": [
+					"A Season of Peace",
+					"The Land Rests"
+				],
+				"bodies": [
+					"No great deeds were done this week, and no great evils either. Even heroes need a season of peace. The chronicle waits, quill in hand.",
+					"The land rests. Swords hang on their hooks and the furnaces cool. Enjoy it: in the old tales, the quiet never lasts."
+				]
+			},
+			"first": {
+				"headlines": [
+					"A First Deed for {player}",
+					"{player} Begins a New Chapter"
+				],
+				"bodies": [
+					"Every legend is built of first deeds. This week {player} {fact} for the first time, and a new chapter of their story begins.",
+					"Let it be recorded: {player} {fact} for the first time. Small beginnings make great endings."
+				]
+			},
+			"pursuit.new": {
+				"headlines": [
+					"{player} Takes Up a New Calling",
+					"A New Path for {player}"
+				],
+				"bodies": [
+					"{player} has turned to a new calling: {amount} {measure} this week. Every master was once a beginner, and every saga has a turning point.",
+					"{amount} {measure}, where before there were none. {player} walks a new path, and the chronicle follows."
+				]
+			},
+			"pursuit.record": {
+				"headlines": [
+					"{player} Surpasses Every Former Deed",
+					"The Greatest Week of {player}"
+				],
+				"bodies": [
+					"Never before has {player} done so much: {amount} {measure}, where {usual} is their custom. The chronicle sets this week above all others.",
+					"{amount} {measure}, against a usual {usual}. In this week {player} outdid their own legend."
+				]
+			},
+			"bounty": {
+				"headlines": [
+					"{player} Answers the Call of {who}",
+					"A Quest for {who}"
+				],
+				"bodies": [
+					"When {who} called for aid, {player} answered: they {deed}. So are the bonds of the realm made strong.",
+					"A notice was posted, and a hero came. {player} {deed} for {who}, and the debt is paid in full."
+				]
+			}
+		}
+	}
+}

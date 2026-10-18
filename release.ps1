@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Builds Herald for each loader against each supported Minecraft series and collects the jars into
+  Builds The Observer for each loader against each supported Minecraft series and collects the jars into
   releases/.
 
 .DESCRIPTION
@@ -35,7 +35,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
-$mods = @("herald")
+$mods = @("observer")
 
 function Get-MavenVersions([string]$url) {
     Write-Host "Fetching $url" -ForegroundColor DarkGray

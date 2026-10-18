@@ -1,28 +1,29 @@
 modLoader = "javafml"
 loaderVersion = "[1,)"
 license = "MIT"
-issueTrackerURL = "https://github.com/SpaceBod/herald/issues"
+issueTrackerURL = "https://github.com/SpaceBod/the-observer/issues"
 
 [[mods]]
-modId = "spacebod_herald"
+modId = "spacebod_observer"
 version = "${version}"
-displayName = "Herald"
-displayURL = "https://github.com/SpaceBod/herald"
-iconFile = "assets/spacebod_herald/icon.png"
+displayName = "The Observer"
+displayURL = "https://github.com/SpaceBod/the-observer"
+${icon}File = "assets/spacebod_observer/icon.png"
+${icon}Blur = false
 authors = "SpaceBod"
-description = '''A weekly newspaper about your world's players, written from what actually happened and delivered by a delivery dog. Optionally written by a small AI model that runs on your own computer.'''
+description = '''The AI newspaper for your Minecraft world: every week a language model on your own computer writes up what your world's players actually did, and the Pawstman delivers it to your door.'''
 
 [[mixins]]
-config = "spacebod_herald.mixins.json"
+config = "spacebod_observer.mixins.json"
 
-[[dependencies.spacebod_herald]]
+[[dependencies.spacebod_observer]]
 modId = "neoforge"
 type = "required"
 versionRange = "${minecraft_range}"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.spacebod_herald]]
+[[dependencies.spacebod_observer]]
 modId = "minecraft"
 type = "required"
 versionRange = "${minecraft_range}"

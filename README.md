@@ -1,153 +1,244 @@
-# Herald
+<div align="center">
 
-A weekly newspaper about the players in your world. Every seven in-game days, the Herald writes up what actually happened (who died and how, who found diamonds, who took up farming, who finally beat the Ender Dragon), posts work from the townsfolk, ranks everyone on the leaderboards, and a delivery dog brings a copy to every player.
+# The Observer
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+<img src="docs/images/banner.jpg" alt="The Observer: the AI newspaper for your world. A newsstand on the left, the Pawstman with the paper on the right" width="100%">
 
-## Overview
+<img src="https://img.shields.io/badge/Minecraft-26.1%20%E2%80%93%2026.3-62B47A?style=for-the-badge" alt="Minecraft 26.1 to 26.3" height="40">
+<img src="https://img.shields.io/badge/Written%20by-a%20local%20AI-1F3A8A?style=for-the-badge" alt="Written by an AI on your own computer" height="40">
+<img src="https://img.shields.io/badge/License-MIT-9A1F1F?style=for-the-badge" alt="MIT licence" height="40">
+<br>
+<a href="https://fabricmc.net"><img src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/supported/fabric_vector.svg" alt="Supported on Fabric" height="40"></a>
+<a href="https://neoforged.net"><img src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/supported/neoforge_vector.svg" alt="Supported on NeoForge" height="40"></a>
 
-- **Side:** Both. The server writes and delivers the paper; clients need the mod for the newspaper item, the delivery dog and the reading screen.
-- **Minecraft:** 26.1, 26.2, 26.3
-- **Loader:** Fabric (Loader ≥ 0.19.5 + Fabric API) or NeoForge
-- **Optional:** a small AI model that writes the stories on your own computer, offline (see [The press](#the-press-optional-ai-writing)).
+## The AI newspaper for your Minecraft world
 
-## The paper
+Every week, a language model running on your own computer reads everything that happened in your world and writes
+it up as a newspaper: who beat the Ender Dragon, who struck diamonds and then lava, who built half a castle, who died
+six times and still won't talk about it. A delivery dog brings it to your door.
 
-Use the paper to open it: three spreads of a stapled newspaper.
+<!-- TODO: download and version badges (Modrinth, CurseForge) once The Observer is published there. -->
 
-1. **The news (pages 1-2).** A masthead named after your world, the lead story across the front page, more stories in columns, an "In Brief" column, then opinion pieces and almanac items to fill the page. Page 2's sidebar has the obituaries, the town's numbers, the weather and the small ads. Nothing is ever cut off: a story only goes in if it fits whole.
-2. **The Exchange (pages 3-4).** Six notices for whoever is reading: four deliveries for townsfolk of different trades ("WANTED: 128 wheat") and two jobs for the Watch ("Deal with 12 zombies"). Each reader sees their own, worked out from the edition and their player ID. Progress shows live; "Hand in" or "Claim" when it's done; one each, until the next edition.
-3. **The Leaderboard and the Hall of Fame (pages 5-6).** Eight rankings of who led the town at what since the last edition, and eight all-time records. Picked fresh each edition from over 30 boards, plus a "Top Hunter" board for every creature anyone killed: busy boards and close races first, and boards that ran last time get a rest.
+</div>
 
-## What makes the news
+<img src="docs/images/articles-page-1.jpg" alt="The front page: the masthead, the Ender Dragon story leading, columns of news, obituaries and the town's numbers" width="100%">
 
-Everything comes from the statistics the game keeps anyway, compared edition by edition, plus deaths and advancements as they happen:
+---
 
-- **Stories** for the big things: deaths (in the game's own words), advancements, boss kills, mining hauls (diamonds lead), building, travel, farming, trading, raids, monster hunts, and a few sillier ones for slow weeks.
-- **Firsts.** About 60 milestones, spotted the edition they happen: the first diamond pickaxe, first steps in the Nether, the first enchantment, a portal lit, an elytra picked up.
-- **Habits and record weeks.** Twenty-odd pursuits (farming, forestry, redstone, cooking, fishing, sailing, music...) measured against each player's own usual week: "took up redstone", or "a record week: 420 crops planted, usually about 40".
-- **Every player who has ever played**, online or not, read from the world's statistics files, so the first paper on an existing world covers everyone.
-- **A varied line-up.** Every candidate story is scored; the biggest leads, and no one player or kind of story takes over the paper.
+## Why The Observer
+
+A good server week is full of moments: the night someone finally killed the Wither, the raid you barely survived, the
+mega-build that went up while you were at work. By next week they're gone, buried in chat and half-remembered.
+
+The Observer keeps them. Each edition is written fresh by an AI from what actually happened, so every story is about
+your world and your friends, told in the voice of a proud small-town paper (or a merciless roast, or an epic saga).
+Log in after a few days away and catch up on everything you missed in five minutes of reading. Keep every edition on
+a bookshelf, and your world builds its own history: a shelf of front pages you can take down and reread, from the
+first night to the hundredth dragon.
+
+It needs no setup and works in singleplayer and on servers. The model runs on your computer, so nothing about your
+world ever leaves it.
+
+## What's inside
+
+- [Written by AI, on your computer](#written-by-ai-on-your-computer)
+- [The newspaper](#the-newspaper)
+- [The news](#the-news)
+- [Your world's history, on a shelf](#your-worlds-history-on-a-shelf)
+- [The Exchange](#the-exchange)
+- [The newsstand](#the-newsstand)
+- [The Pawstman](#the-pawstman)
+- [The Editor's Desk](#the-editors-desk)
+
+## Written by AI, on your computer
+
+The Observer has a whole newsroom inside it, and every member of staff is a small language model running locally:
+
+1. **The editor** reads a file on every player who did something worth printing: what they did, how it compares with
+   their usual week and with everyone else, what the paper said about them last time. Then it plans the edition: an
+   angle for each story, and now and then a quote from one of the townsfolk.
+2. **The reporters** write each story several times over, in the paper's voice.
+3. **The sub-editor** checks every draft against the facts before it goes to print. Every number, every name and every
+   quote must be real; the best draft that passes is printed.
+4. **The letters page** fills up with letters and opinion columns from the townsfolk.
+
+The model is downloaded once, from inside the game (533 MB, or 1.3 GB for the quality model), and runs on your
+graphics card (Vulkan or Metal) or your CPU. An edition takes well under a minute on a mid-range card. Nothing is sent
+anywhere.
+
+**Three voices** to choose from:
+
+| Voice | |
+|---|---|
+| **The Broadsheet** (default) | A proud small-town paper reporting your blocky adventures with complete seriousness and a dry wit. |
+| **The Roast** | No resident is safe. Every story is a joke at somebody's expense: deaths, blunders and bragging all fair game. |
+| **The Chronicle** | Every deed a legend, every player a hero of the age. |
+
+Rather not download a model? The Observer writes every edition from its built-in house templates instead: the same
+paper and the same news, in a fixed set of phrasings. See [The press](docs/press.md).
+
+<img src="docs/images/articles-page-2.jpg" alt="The second news spread: more stories, letters and opinion columns from the townsfolk, and Did You Know?" width="100%">
+
+## The newspaper
+
+Right-click the paper to open it: a stapled newspaper you leaf through with page-turn arrows.
+
+- **The front page.** The masthead, the week's lead story across the top, more news in columns, and a sidebar with the
+  obituaries, the town's numbers and the weather.
+- **More news,** letters and opinion columns from the townsfolk, small ads, and a **Did You Know?** column of real
+  Minecraft trivia.
+- **The Exchange,** your own page of jobs for the townsfolk (see [below](#the-exchange)).
+- **The Leaderboard and the Hall of Fame:** who led the town at what this week, and the all-time records.
+
+Players' names are printed in blue, so you spot yourself (and your friends) at a glance.
+
+<p>
+<img src="docs/images/exchange-page.jpg" alt="The Exchange: notices from the townsfolk, with hand-in and claim buttons" width="49%">
+<img src="docs/images/leaderboard-page.jpg" alt="The Leaderboard and the Hall of Fame" width="49%">
+</p>
+
+## The news
+
+The paper reads the statistics Minecraft already keeps on every player, plus every death and advancement as it
+happens, and works out what's worth printing:
+
+- **The big moments lead.** A dragon or a Wither slain always takes the front page.
+- **Firsts.** About 60 milestones: the first diamond pickaxe, first steps in the Nether, the first enchantment.
+- **New habits and record weeks,** measured against each player's usual week: "took up redstone", "a record harvest:
+  1,400 crops, usually about 160".
+- **Stories that connect.** A death that follows from something else is told as one story: crashing while gliding the
+  week you found elytra, a swim in lava the week you found diamonds, being killed by the very creatures you spent the
+  week hunting.
+- **The whole town.** Every player who has ever joined is in the paper, online or not, so the first edition on an
+  existing world already knows everyone.
+- **Daily, weekly or fortnightly.** The paper comes out on the schedule you choose, and the wording, comparisons and
+  Exchange all follow it.
+
+## Your world's history, on a shelf
+
+Papers keep. Put them on a chiseled bookshelf and they stay there like books, every story, letter and Exchange notice
+intact. Build a reading room, file every issue in order, and your world has its own archive: the week the server
+started, the first dragon, the great cactus-farm flood. Take one down any time and reread it.
 
 ## The Exchange
 
-- **Townsfolk with names:** each notice is posted by someone with a trade (Farmer, Mason, Fisherman, Cleric, Librarian, Armourer, Shepherd, Fletcher, Leatherworker, Butcher, Cartographer, Toolsmith, Forester, Baker) from a town that ranges from Little Ashcombe to Gloamwood. Now and then a famous face turns up in a job that suits them.
-- **Fair pay:** priced from vanilla villager trade rates, at the generous end, in week-sized amounts. Some pay in goods instead of emeralds.
-- **Suited to you:** nobody is asked for blaze rods before they've been to the Nether.
-- **Checked by the server:** deliveries are taken from your inventory, Watch jobs count kills since the paper was printed. Finished work makes the next edition's news.
+Every reader gets six notices of their own from named townsfolk (farmers, masons, librarians, toolsmiths and more) and
+the Watch: four deliveries ("WANTED: 128 wheat") and two monster jobs ("Deal with 12 zombies"). Notices are pitched to
+how far you've got, paid at the generous end of villager prices in emeralds, goods and enchanted books, and checked by
+the server. Progress shows live on the page, with **Hand in** or **Claim** when it's done, and finished jobs make the
+next edition's news.
 
-## Delivered by hand
+## The newsstand
 
-A delivery dog in a red collar appears somewhere you can't see it, trots over with the paper rolled up in its mouth, drops it at your feet with a bark and runs off. It can't be tamed, isn't saved with the world, and drops the paper if anyone hits it. If it can't find a way to you, the paper goes straight into your inventory. Players who were offline get theirs when they next join.
+<img src="docs/images/multicolor-options-dog.jpg" alt="Newsstands painted in every dye colour, the Pawstman in front" width="100%">
 
-## The press (optional AI writing)
+A painted vending box on a post, where anyone can pick up the latest edition.
 
-Out of the box, the Herald writes every story from its own house templates, in a consistent, deadpan small-town-paper style.
+- **Your copy at a glance.** The window shows a fresh paper while your copy is waiting and is empty once you've had
+  it. Its lamps (the coin slot and the bulb on the lid) glow green while your copy waits, red once you have it and
+  orange while the next edition is at the press. Every player sees their own.
+- **A new edition arrives** with the bell ringing and the stand sparkling.
+- **Any colour.** It comes in red; use any dye on it to repaint it.
 
-It can also write each story with a small language model that runs **on your computer, offline**. The model only sees the facts the newsroom collected for that story ("Steve mined 412 blocks", "the block mined most was stone: 380"), replies in a fixed JSON shape, and every reply goes through the sub-editor before it can be printed:
+<p>
+<img src="docs/images/state-delivered.jpg" alt="Your copy is waiting: a paper in the window, lamps green" width="32%">
+<img src="docs/images/state-collected.jpg" alt="You have your copy: the window empty, lamps red" width="32%">
+<img src="docs/images/state-printing.jpg" alt="The next edition is at the press: lamps orange" width="32%">
+</p>
 
-- **Structure:** valid JSON matching the profile's schema
-- **Sanitising:** Unicode normalisation; no control characters, formatting codes, emoji or markdown
-- **Form:** the right length, a finished sentence, English, no looping
-- **Grounding:** the player is named correctly; every number, player, notable thing and quote comes from the facts
-- **Policy and copying:** no banned phrases, "they" for players, nothing lifted from the instructions
+**Crafting.** Emeralds, iron ingots, two glass panes (any colour), paper and a wooden chest:
 
-A reply that fails is redrafted; after three failures the house template is printed instead. The paper never depends on the model.
+<img src="docs/images/crafting-recipe.jpg" alt="The newsstand's crafting recipe: emerald, iron ingot, emerald; glass pane, paper, glass pane; iron ingot, chest, iron ingot" width="60%">
 
-Everything that shapes the model is in **`config/herald-press.json`**: the persona and system prompt, the request template, a brief per kind of story, few-shot examples, sampling settings, the JSON Schema and every check. It is written with the defaults on first run and re-read for every edition.
+**The counter.** Right-click the stand for the status, a live countdown to the next edition, your copy (bought through
+the coin slot, spares too) and your choice of delivery: the Pawstman, or collecting here.
 
-**Installing a model**
+## The Pawstman
 
-- **Singleplayer:** when a world opens without a model, the Herald offers to download one, recommends one for your computer and shows the size. You can also open the models folder, visit the model's page, or tell it never to ask again.
-- **Dedicated server:** `/herald model download standard` (or `quality`), or put a `.gguf` file in `herald-models/` in the server folder.
+<p>
+<img src="docs/images/pawstman-approach.jpg" alt="The Pawstman arriving with the paper rolled in his mouth" width="49%">
+<img src="docs/images/newsstand-dog.jpg" alt="The Pawstman beside a newsstand" width="49%">
+</p>
 
-| Model | Download | Extra memory while writing | For |
-|---|---|---|---|
-| Standard: Qwen3.5 0.8B (Q4_K_M) | 533 MB | about 0.8 GB | any computer that runs Minecraft |
-| Quality: Qwen3.5 2B (Q4_K_M) | 1.3 GB | about 1.6 GB | 16 GB of RAM or more |
+The paper's delivery dog, in a red collar. When a new edition comes out he appears somewhere out of sight and trots
+over with your copy rolled up in his mouth.
 
-- **Where it comes from:** both models are Apache-2.0 licensed, downloaded from Hugging Face ([0.8B](https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF), [2B](https://huggingface.co/unsloth/Qwen3.5-2B-GGUF)) and checked against the published SHA-256.
-- **When it runs:** only while an edition is being written, on a low-priority background thread using up to 4 cores, then it unloads.
-- **Size and platforms:** the engine is llama.cpp, bundled in the mod jar (most of the jar's size), for Windows (x64, ARM64), Linux (x64, ARM64) and Apple Silicon Macs. Elsewhere the Herald uses its templates.
-- **Nothing is sent anywhere:** the only network access is the model download you ask for, and looking up the names of players who haven't been online, the same way the game does for player heads.
+- **Paying.** He follows you, barking, until you right-click him. His counter takes the price in its coin slot (one
+  emerald by default); **Pay & take** the paper or say **No thanks**. Your first copy is on the house.
+- **Saying no.** Turn him away and he takes the paper home; buy it at a newsstand whenever you like. If your pockets
+  are empty he doesn't pester you.
+- **He always finds you.** Like a tamed wolf, he teleports to your side when there's no way through. If he truly can't
+  reach you, your copy waits at the nearest newsstand.
 
-## Usage
+<img src="docs/images/pawstman-gui.jpg" alt="The Pawstman's counter: the price in the coin slot, pay and take, or no thanks" width="60%">
 
-| Command | Who | What it does |
-|---|---|---|
-| `/herald` | Everyone | Lists the commands |
-| `/herald reprint` | Everyone | A fresh copy of the latest edition |
-| `/herald publish` | Operators | Print an edition now (closes the current period) |
-| `/herald status` | Operators | Latest issue, when the next is due, and how the model did last time |
-| `/herald model download <standard\|quality>` | Admins | Download a writing model on a dedicated server |
+## The Editor's Desk
 
-## Configuration
+Operators run the paper from the Editor's Desk, folded beside every newsstand's counter: the paper's voice, how often
+it comes out, whether it publishes on its own, the Exchange's rewards, the Pawstman's duty and price, whether the
+first copy is free, and a button to publish an edition right now.
 
-`config/herald.json`:
+<img src="docs/images/newsstand-gui-op.jpg" alt="The newsstand's counter, with the Editor's Desk open beside it" width="100%">
 
-| Option | Default | |
-|---|---|---|
-| `daysPerEdition` | `7` | In-game days between editions. An edition comes out at sunrise on its day. |
-| `paperName` | `""` | Masthead. Empty: "The *world name* Herald". |
-| `storiesPerEdition` | `8` | Stories the news desk sends to press; those that fit pages 1-2 are printed. |
-| `deliveryDog` | `true` | Off: papers go straight into inventories. |
-| `usePress` | `true` | Write stories with the installed model. Off: house templates only. |
-| `model` | `""` | Model file to use from `herald-models/`. Empty: the newest one. |
-| `pressThreads` | `0` | CPU threads for the model. 0: half your cores, at most 4. |
-| `offerModelDownload` | `true` | Singleplayer: offer to download a model when none is installed. |
+## Getting started
 
-`config/herald-press.json`: the writing model's profile, see [The press](#the-press-optional-ai-writing).
+The first edition comes out at sunrise, and the Pawstman brings everyone their first copy free.
 
-Each world's records live in `<world>/spacebod_herald/`: plain JSON with who lives there, their statistics as of the last edition, their recent history, the Exchange hand-ins and the latest edition.
+1. **Read the paper.** Right-click the Pawstman to take your copy, then right-click the paper to read it.
+2. **Earn some emeralds.** Do a notice on the Exchange and press **Hand in** or **Claim** on its page.
+3. **Pay for the next one.** From the next edition a copy costs an emerald: pay the Pawstman at the door, or buy it at
+   a newsstand later.
+4. **Build a newsstand** once you're trading with villagers, and pick up your paper whenever you like.
+5. **Start a shelf.** Keep every edition on a chiseled bookshelf.
 
-## Notes
+## Requirements
 
-- Editions follow the overworld's day count, so with the daylight cycle switched off no new editions come out on their own (`/herald publish` still works).
-- The house content is data, so resource packs can restyle the paper: `copy.json` (story templates, opinion pieces, almanac, small ads), `insights.json` (firsts, pursuits, leaderboards), `exchange.json` (trades, requests, prices), `names.json` (people and towns), `press.json` (the default press profile), all in `assets/spacebod_herald/herald/`.
+| Requirement | Version or details |
+|---|---|
+| Minecraft | 26.1, 26.2 or 26.3 |
+| Mod loader | Fabric Loader 0.19.5+ with Fabric API, or NeoForge |
+| Side | Both: the server writes and delivers the paper, clients need the mod to read it |
+| Writing model | Downloaded in game: 533 MB (standard) or 1.3 GB (quality). Runs on the GPU (Vulkan or Metal) or the CPU |
 
-## Development
+## Installation
 
-```
-herald/
-├─ build-logic/   shared Fabric/NeoForge Gradle conventions (spacebod.common, .fabric, .neoforge)
-├─ common/        loader-agnostic code: src/main, src/client, src/versions/<series>/ overlays, src/test
-├─ fabric/        Fabric entrypoints and fabric.mod.json
-├─ neoforge/      NeoForge @Mod classes and neoforge.mods.toml
-├─ llama.gradle   bundles the llama.cpp binding (CPU natives for the five platforms) into both jars
-└─ release.ps1    builds every supported Minecraft series for both loaders into releases/
-```
+1. Install Minecraft 26.1, 26.2 or 26.3 with Fabric (and Fabric API) or NeoForge.
+2. Put the jar for your Minecraft version and loader into your `mods` folder, on the server too.
+3. Start the game and open a world. The Observer offers to download a writing model and recommends one for your
+   computer. On a dedicated server, run `/observer model download standard`.
 
-Requires JDK 25. Minecraft 26.x is unobfuscated, so both loaders compile the same `common/` sources; the few classes that differ between series live in `common/src/versions/<series>/`.
+<!-- TODO: download links once published. -->
 
-```bash
-./gradlew :fabric:runClient      # Fabric dev client
-./gradlew :neoforge:runClient    # NeoForge dev client
-./gradlew build                  # both jars for the dev target (gradle.properties)
-./gradlew :common:test           # the test suite
-```
+## Documentation
 
-```powershell
-.\release.ps1                          # every series, both loaders, into releases/
-.\release.ps1 -Versions 26.2 -Loaders fabric
-```
+| Page | What it covers |
+|---|---|
+| [Features](docs/features.md) | Everything in detail: the paper, the news, the archive, the Exchange, the newsstand, the Pawstman |
+| [The press](docs/press.md) | The AI newsroom: how an edition is written and checked, the models, GPU and CPU, tuning, template mode |
+| [Configuration](docs/configuration.md) | Every command, every setting and where the files live |
+| [Development](docs/development.md) | Building, the test suite, the scenario gallery and the demonstration town |
+| [Changelog](CHANGELOG.md) | What changed in each version |
 
-### Tests
+## Building from source
 
-`./gradlew :common:test` runs the newsroom against a bootstrapped vanilla game with no loader and no world:
-
-- **Scenarios** (`common/src/test/.../sim/`): simulated players whose activities leave the statistics the game would really record (a redstone build places wire, repeaters and pistons, crafts them and mines redstone ore; a monster hunt adds kills, damage both ways and the drops) over several editions. They are published through the real ledger, news desk, insights, leaderboards and Exchange. Checks cover a founding edition, a redstone build, a mining expedition, a monster hunt with a race, TNT, a week of deaths, a record harvest, a Nether debut, a quiet week and a busy five-player server.
-- **The Exchange:** the same notices on client and server, four trades and two Watch jobs, no Nether work for newcomers, rewards within vanilla's price range, famous names only in their own trade.
-- **The press:** every sub-editor rule against the kind of drafts small models write, sanitising, and the prompt templates.
-- **The gallery:** every scenario's edition is written as Markdown to `common/build/scenarios/`, to read what the paper would actually say. With `HERALD_MODEL` set to a GGUF file, some scenarios are also printed through the model (`*.press.md`):
+Building needs JDK 25:
 
 ```bash
-HERALD_MODEL=/path/to/Qwen3.5-0.8B-Q4_K_M.gguf ./gradlew :common:test --tests '*GalleryTest*'
+./gradlew build
 ```
 
-## Changelog
+The jars are written to `fabric/build/libs/` and `neoforge/build/libs/`; `release.ps1` builds every supported
+Minecraft version. [Development](docs/development.md) covers dev runs and the tests.
 
-See [CHANGELOG.md](CHANGELOG.md).
+## Credits
+
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)**, the engine that runs the writing model, through the
+  **[java-llama.cpp](https://github.com/bernardladenthin/java-llama.cpp)** binding.
+- **[Qwen3.5](https://huggingface.co/Qwen)** by the Qwen team, the writing models (Apache-2.0), in the GGUF builds
+  published by [Unsloth](https://huggingface.co/unsloth).
+- **[Jackson](https://github.com/FasterXML/jackson)**, bundled for the binding.
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+The Observer is free software under the MIT licence: use it, include it in modpacks, change it and share it, as long
+as the licence and copyright notice come along. See [`LICENSE`](LICENSE).

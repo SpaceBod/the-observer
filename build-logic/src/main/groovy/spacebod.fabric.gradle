@@ -55,12 +55,11 @@ dependencies {
 		capabilities { requireFeature('client') }
 	}
 
-	// Optional: config screen in Mod Menu, built with Cloth Config. Neither is required at runtime.
+	// Optional: the settings screen's entry in Mod Menu. Not required at runtime.
 	// Loom 1.17 has no modCompileOnly/modLocalRuntime; plain compileOnly + localRuntime do the job.
-	compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
-	localRuntime "com.terraformersmc:modmenu:${project.modmenu_version}"
-	compileOnly "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
-	localRuntime "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+	def modmenu = project.property("modmenu_version_${mcSeries}")
+	compileOnly "com.terraformersmc:modmenu:${modmenu}"
+	localRuntime "com.terraformersmc:modmenu:${modmenu}"
 }
 
 tasks.named('compileJava', JavaCompile) { source(commonSrc('main', 'java')) }

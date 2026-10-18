@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"E": "minecraft:emerald",
+		"I": "minecraft:iron_ingot",
+		"G": "#c:glass_panes",
+		"P": "minecraft:paper",
+		"C": "#c:chests/wooden"
+	},
+	"pattern": [
+		"EIE",
+		"GPG",
+		"ICI"
+	],
+	"result": {
+		"id": "spacebod_observer:newsstand",
+		"count": 1
+	}
+}

@@ -1,0 +1,1412 @@
+{
+	"_comment": "The Exchange: townsfolk post work in the paper. A request's 'value' is what one item (or creature) is worth in emeralds, and its count range is sized as a week's work; the job's worth is count x value. The reward is worth that times 'premium' (drawn between the two), so the pay is generous: emeralds, or one of the character's 'prizes' or the 'commonPrizes' that comes out near that value, in master-trade goods - enchanted books, diamonds, diamond gear, golden apples. 'tier' is how far along a player must be: 0 starting out, 1 has found iron, 2 has been to the Nether, 3 has been to the End. A prize's 'max' is how many may be given at once; 'enchant' and 'level' make an enchanted book or enchant the item. Names and towns come from names.json; 'id' picks the profession's name list. Each reader gets 'deliveries' notices from different trades and 'slayings' jobs for the Watch.",
+	"premium": [
+		1.3,
+		1.8
+	],
+	"emeraldShare": 0.25,
+	"maxEmeralds": 192,
+	"deliveries": 4,
+	"slayings": 2,
+	"commonPrizes": [
+		{
+			"item": "minecraft:diamond",
+			"value": 3,
+			"max": 16,
+			"tier": 0
+		},
+		{
+			"item": "minecraft:experience_bottle",
+			"value": 1.2,
+			"max": 64,
+			"tier": 0
+		},
+		{
+			"item": "minecraft:golden_apple",
+			"value": 6,
+			"max": 4,
+			"tier": 0
+		},
+		{
+			"item": "minecraft:ender_pearl",
+			"value": 1.5,
+			"max": 16,
+			"tier": 1
+		}
+	],
+	"characters": [
+		{
+			"id": "farmer",
+			"role": "Farmer",
+			"requests": [
+				{
+					"item": "minecraft:wheat",
+					"value": 0.08,
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "The harvest festival won't bake itself."
+				},
+				{
+					"item": "minecraft:carrot",
+					"value": 0.07,
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "The pigs have been asking, in their way."
+				},
+				{
+					"item": "minecraft:potato",
+					"value": 0.06,
+					"min": 160,
+					"max": 320,
+					"tier": 0,
+					"note": "The winter stores are looking thin."
+				},
+				{
+					"item": "minecraft:beetroot",
+					"value": 0.1,
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "Soup for the whole valley."
+				},
+				{
+					"item": "minecraft:pumpkin",
+					"value": 0.3,
+					"min": 32,
+					"max": 64,
+					"tier": 0,
+					"note": "Pies for every table in town."
+				},
+				{
+					"item": "minecraft:hay_block",
+					"value": 0.7,
+					"min": 16,
+					"max": 32,
+					"tier": 0,
+					"note": "The horses have opinions about the winter."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:golden_carrot",
+					"value": 0.4,
+					"max": 64,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:glistering_melon_slice",
+					"value": 1.0,
+					"max": 32,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:unbreaking",
+					"level": 3,
+					"value": 14,
+					"max": 1,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "mason",
+			"role": "Mason",
+			"requests": [
+				{
+					"item": "minecraft:stone",
+					"value": 0.06,
+					"min": 256,
+					"max": 512,
+					"tier": 0,
+					"note": "The new town wall is going to be very long."
+				},
+				{
+					"item": "minecraft:bricks",
+					"value": 0.25,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "The chimney fell down. All of it."
+				},
+				{
+					"item": "minecraft:clay_ball",
+					"value": 0.12,
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "The kiln is hungry and so is the order book."
+				},
+				{
+					"item": "minecraft:obsidian",
+					"value": 0.8,
+					"min": 16,
+					"max": 32,
+					"tier": 1,
+					"note": "A vault door for the bank. Don't ask what's inside."
+				},
+				{
+					"item": "minecraft:deepslate_bricks",
+					"value": 0.15,
+					"min": 96,
+					"max": 160,
+					"tier": 1,
+					"note": "Foundations for the new hall, built to last."
+				},
+				{
+					"item": "minecraft:quartz_block",
+					"value": 0.6,
+					"min": 24,
+					"max": 64,
+					"tier": 2,
+					"note": "Only the finest for the chapel floor."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:diamond_pickaxe",
+					"value": 8,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:efficiency",
+					"level": 4,
+					"value": 15,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:unbreaking",
+					"level": 3,
+					"value": 14,
+					"max": 1,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "fisherman",
+			"role": "Fisherman",
+			"requests": [
+				{
+					"item": "minecraft:cod",
+					"value": 0.1,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Fish supper for the whole harbour."
+				},
+				{
+					"item": "minecraft:salmon",
+					"value": 0.12,
+					"min": 48,
+					"max": 96,
+					"tier": 0,
+					"note": "A wedding feast. Don't ask whose."
+				},
+				{
+					"item": "minecraft:pufferfish",
+					"value": 0.6,
+					"min": 8,
+					"max": 16,
+					"tier": 0,
+					"note": "For science. Probably."
+				},
+				{
+					"item": "minecraft:tropical_fish",
+					"value": 0.4,
+					"min": 12,
+					"max": 24,
+					"tier": 0,
+					"note": "The aquarium opens next week."
+				},
+				{
+					"item": "minecraft:nautilus_shell",
+					"value": 2.5,
+					"min": 3,
+					"max": 6,
+					"tier": 0,
+					"note": "A collector from out of town is paying well."
+				},
+				{
+					"item": "minecraft:prismarine_shard",
+					"value": 0.25,
+					"min": 48,
+					"max": 96,
+					"tier": 1,
+					"note": "New lamps for the lighthouse."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:luck_of_the_sea",
+					"level": 3,
+					"value": 12,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:lure",
+					"level": 3,
+					"value": 12,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:depth_strider",
+					"level": 3,
+					"value": 14,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:respiration",
+					"level": 3,
+					"value": 12,
+					"max": 1,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "cleric",
+			"role": "Cleric",
+			"requests": [
+				{
+					"item": "minecraft:rotten_flesh",
+					"value": 0.05,
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "We do not ask what we do with it."
+				},
+				{
+					"item": "minecraft:gold_ingot",
+					"value": 0.7,
+					"min": 16,
+					"max": 32,
+					"tier": 1,
+					"note": "To regild the bell tower."
+				},
+				{
+					"item": "minecraft:rabbit_foot",
+					"value": 2,
+					"min": 4,
+					"max": 8,
+					"tier": 0,
+					"note": "Luck is in short supply."
+				},
+				{
+					"item": "minecraft:phantom_membrane",
+					"value": 1,
+					"min": 8,
+					"max": 16,
+					"tier": 1,
+					"note": "For a tonic that helps the town sleep."
+				},
+				{
+					"item": "minecraft:nether_wart",
+					"value": 0.12,
+					"min": 64,
+					"max": 128,
+					"tier": 2,
+					"note": "For the brewing of fine tonics."
+				},
+				{
+					"item": "minecraft:ghast_tear",
+					"value": 4,
+					"min": 2,
+					"max": 4,
+					"tier": 2,
+					"note": "For a remedy of last resort."
+				},
+				{
+					"item": "minecraft:turtle_scute",
+					"value": 2,
+					"min": 4,
+					"max": 8,
+					"tier": 0,
+					"note": "For a potion of quiet strength."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:experience_bottle",
+					"value": 1.2,
+					"max": 64,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:ender_pearl",
+					"value": 1.5,
+					"max": 16,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:golden_apple",
+					"value": 6,
+					"max": 4,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:totem_of_undying",
+					"value": 30,
+					"max": 1,
+					"tier": 2
+				}
+			]
+		},
+		{
+			"id": "librarian",
+			"role": "Librarian",
+			"requests": [
+				{
+					"item": "minecraft:book",
+					"value": 1.0,
+					"min": 16,
+					"max": 32,
+					"tier": 0,
+					"note": "The shelves look embarrassingly bare."
+				},
+				{
+					"item": "minecraft:paper",
+					"value": 0.06,
+					"min": 128,
+					"max": 320,
+					"tier": 0,
+					"note": "The Observer itself is running low."
+				},
+				{
+					"item": "minecraft:bookshelf",
+					"value": 3,
+					"min": 8,
+					"max": 16,
+					"tier": 0,
+					"note": "A new reading room. Very quiet. Very wooden."
+				},
+				{
+					"item": "minecraft:ink_sac",
+					"value": 0.25,
+					"min": 32,
+					"max": 64,
+					"tier": 0,
+					"note": "We've written ourselves dry."
+				},
+				{
+					"item": "minecraft:feather",
+					"value": 0.1,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Quills wear out faster than you'd think."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:mending",
+					"level": 1,
+					"value": 22,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:silk_touch",
+					"level": 1,
+					"value": 15,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:fortune",
+					"level": 3,
+					"value": 20,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:looting",
+					"level": 3,
+					"value": 18,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:efficiency",
+					"level": 5,
+					"value": 20,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:protection",
+					"level": 4,
+					"value": 18,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:sharpness",
+					"level": 5,
+					"value": 18,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:feather_falling",
+					"level": 4,
+					"value": 14,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:power",
+					"level": 5,
+					"value": 16,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:infinity",
+					"level": 1,
+					"value": 15,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:unbreaking",
+					"level": 3,
+					"value": 14,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:name_tag",
+					"value": 12,
+					"max": 2,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "armorer",
+			"role": "Armourer",
+			"requests": [
+				{
+					"item": "minecraft:iron_ingot",
+					"value": 0.5,
+					"min": 32,
+					"max": 64,
+					"tier": 1,
+					"note": "Chainmail for the whole Watch."
+				},
+				{
+					"item": "minecraft:diamond",
+					"value": 3,
+					"min": 3,
+					"max": 8,
+					"tier": 1,
+					"note": "A very special commission."
+				},
+				{
+					"item": "minecraft:coal",
+					"value": 0.12,
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "The forge never sleeps."
+				},
+				{
+					"item": "minecraft:lava_bucket",
+					"value": 2,
+					"min": 3,
+					"max": 6,
+					"tier": 1,
+					"note": "Hotter. The forge must be hotter."
+				},
+				{
+					"item": "minecraft:gold_ingot",
+					"value": 0.7,
+					"min": 16,
+					"max": 32,
+					"tier": 1,
+					"note": "Gilded armour for a very vain customer."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:diamond_chestplate",
+					"value": 14,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:diamond_helmet",
+					"value": 9,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:diamond_boots",
+					"value": 8,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:protection",
+					"level": 4,
+					"value": 18,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:thorns",
+					"level": 3,
+					"value": 12,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:blast_protection",
+					"level": 4,
+					"value": 12,
+					"max": 1,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "shepherd",
+			"role": "Shepherd",
+			"requests": [
+				{
+					"item": "minecraft:white_wool",
+					"value": 0.1,
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "Blankets before the cold snap."
+				},
+				{
+					"item": "minecraft:red_dye",
+					"value": 0.2,
+					"min": 32,
+					"max": 64,
+					"tier": 0,
+					"note": "The mayor wants a new cloak. A big one."
+				},
+				{
+					"item": "minecraft:blue_dye",
+					"value": 0.25,
+					"min": 32,
+					"max": 64,
+					"tier": 0,
+					"note": "Bunting for the summer fete."
+				},
+				{
+					"item": "minecraft:string",
+					"value": 0.1,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "The loom is hungry."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:name_tag",
+					"value": 12,
+					"max": 2,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:saddle",
+					"value": 6,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:golden_carrot",
+					"value": 0.4,
+					"max": 64,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "fletcher",
+			"role": "Fletcher",
+			"requests": [
+				{
+					"item": "minecraft:flint",
+					"value": 0.12,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Arrowheads for the archery tournament."
+				},
+				{
+					"item": "minecraft:string",
+					"value": 0.12,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Bowstrings snap. It's a fact of life."
+				},
+				{
+					"item": "minecraft:feather",
+					"value": 0.1,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Fletching for a thousand arrows."
+				},
+				{
+					"item": "minecraft:tripwire_hook",
+					"value": 0.4,
+					"min": 16,
+					"max": 32,
+					"tier": 0,
+					"note": "Traps for the Watch. Strictly for the monsters."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:power",
+					"level": 5,
+					"value": 16,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:infinity",
+					"level": 1,
+					"value": 15,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:punch",
+					"level": 2,
+					"value": 10,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:flame",
+					"level": 1,
+					"value": 12,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:multishot",
+					"level": 1,
+					"value": 12,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:piercing",
+					"level": 4,
+					"value": 12,
+					"max": 1,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "leatherworker",
+			"role": "Leatherworker",
+			"requests": [
+				{
+					"item": "minecraft:leather",
+					"value": 0.5,
+					"min": 32,
+					"max": 64,
+					"tier": 0,
+					"note": "Saddlebags for every post rider in the county."
+				},
+				{
+					"item": "minecraft:rabbit_hide",
+					"value": 0.3,
+					"min": 32,
+					"max": 64,
+					"tier": 0,
+					"note": "Gloves for the whole winter market."
+				},
+				{
+					"item": "minecraft:turtle_scute",
+					"value": 2,
+					"min": 4,
+					"max": 8,
+					"tier": 0,
+					"note": "A helmet for a very particular customer."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:saddle",
+					"value": 6,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:name_tag",
+					"value": 12,
+					"max": 2,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:diamond_horse_armor",
+					"value": 12,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:feather_falling",
+					"level": 4,
+					"value": 14,
+					"max": 1,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "butcher",
+			"role": "Butcher",
+			"requests": [
+				{
+					"item": "minecraft:beef",
+					"value": 0.15,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Stew for the miners. A lot of stew."
+				},
+				{
+					"item": "minecraft:porkchop",
+					"value": 0.15,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "The inn has a very big booking."
+				},
+				{
+					"item": "minecraft:chicken",
+					"value": 0.12,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Sunday roast for the whole street."
+				},
+				{
+					"item": "minecraft:rabbit",
+					"value": 0.4,
+					"min": 16,
+					"max": 32,
+					"tier": 0,
+					"note": "Rabbit pie, by royal request."
+				},
+				{
+					"item": "minecraft:mutton",
+					"value": 0.15,
+					"min": 48,
+					"max": 96,
+					"tier": 0,
+					"note": "Supper for the shearing season."
+				},
+				{
+					"item": "minecraft:sweet_berries",
+					"value": 0.08,
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "For the jam competition. It's war."
+				},
+				{
+					"item": "minecraft:dried_kelp_block",
+					"value": 0.8,
+					"min": 16,
+					"max": 32,
+					"tier": 0,
+					"note": "Smokehouse fuel, and plenty of it."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:golden_carrot",
+					"value": 0.4,
+					"max": 64,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:rabbit_stew",
+					"value": 1,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:cooked_porkchop",
+					"value": 0.2,
+					"max": 64,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "cartographer",
+			"role": "Cartographer",
+			"requests": [
+				{
+					"item": "minecraft:paper",
+					"value": 0.06,
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "The new survey needs a great many maps."
+				},
+				{
+					"item": "minecraft:glass_pane",
+					"value": 0.12,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Lenses for the new observatory."
+				},
+				{
+					"item": "minecraft:compass",
+					"value": 2,
+					"min": 2,
+					"max": 4,
+					"tier": 1,
+					"note": "For the apprentices, who keep getting lost."
+				},
+				{
+					"item": "minecraft:amethyst_shard",
+					"value": 0.3,
+					"min": 32,
+					"max": 64,
+					"tier": 0,
+					"note": "Spyglasses for every lookout tower."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:ender_pearl",
+					"value": 1.5,
+					"max": 16,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:name_tag",
+					"value": 12,
+					"max": 2,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:spyglass",
+					"value": 4,
+					"max": 1,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "toolsmith",
+			"role": "Toolsmith",
+			"requests": [
+				{
+					"item": "minecraft:iron_ingot",
+					"value": 0.5,
+					"min": 32,
+					"max": 64,
+					"tier": 1,
+					"note": "The orders are piling up."
+				},
+				{
+					"item": "minecraft:coal",
+					"value": 0.12,
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "For tempering a new batch of tools."
+				},
+				{
+					"item": "minecraft:diamond",
+					"value": 3,
+					"min": 3,
+					"max": 6,
+					"tier": 1,
+					"note": "A pickaxe for a very important customer."
+				},
+				{
+					"item": "minecraft:copper_ingot",
+					"value": 0.12,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Lightning rods for every roof in town."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:diamond_pickaxe",
+					"value": 8,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:diamond_axe",
+					"value": 8,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:efficiency",
+					"level": 5,
+					"value": 20,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:unbreaking",
+					"level": 3,
+					"value": 14,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:silk_touch",
+					"level": 1,
+					"value": 15,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:fortune",
+					"level": 3,
+					"value": 20,
+					"max": 1,
+					"tier": 1
+				}
+			]
+		},
+		{
+			"id": "forester",
+			"role": "Forester",
+			"requests": [
+				{
+					"item": "minecraft:oak_log",
+					"value": 0.15,
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "The new mill won't saw itself."
+				},
+				{
+					"item": "minecraft:spruce_log",
+					"value": 0.15,
+					"min": 96,
+					"max": 192,
+					"tier": 0,
+					"note": "Winter firewood, and plenty of it."
+				},
+				{
+					"item": "minecraft:birch_log",
+					"value": 0.15,
+					"min": 64,
+					"max": 160,
+					"tier": 0,
+					"note": "Pale timber for the chapel pews."
+				},
+				{
+					"item": "minecraft:dark_oak_log",
+					"value": 0.18,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "Dark wood for a very grand door."
+				},
+				{
+					"item": "minecraft:cherry_log",
+					"value": 0.2,
+					"min": 48,
+					"max": 96,
+					"tier": 0,
+					"note": "Pink panelling for the tea rooms."
+				},
+				{
+					"item": "minecraft:apple",
+					"value": 0.4,
+					"min": 16,
+					"max": 32,
+					"tier": 0,
+					"note": "Cider season. Purely for medicinal reasons."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:golden_apple",
+					"value": 6,
+					"max": 4,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:diamond_axe",
+					"value": 8,
+					"max": 1,
+					"tier": 1
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:efficiency",
+					"level": 4,
+					"value": 15,
+					"max": 1,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_book",
+					"enchant": "minecraft:unbreaking",
+					"level": 3,
+					"value": 14,
+					"max": 1,
+					"tier": 0
+				}
+			]
+		},
+		{
+			"id": "baker",
+			"role": "Baker",
+			"requests": [
+				{
+					"item": "minecraft:wheat",
+					"value": 0.08,
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "Flour doesn't grow on trees. It grows in fields."
+				},
+				{
+					"item": "minecraft:sugar_cane",
+					"value": 0.08,
+					"min": 128,
+					"max": 256,
+					"tier": 0,
+					"note": "The cake orders have doubled."
+				},
+				{
+					"item": "minecraft:egg",
+					"value": 0.12,
+					"min": 64,
+					"max": 128,
+					"tier": 0,
+					"note": "A wedding cake. Seven tiers."
+				},
+				{
+					"item": "minecraft:cocoa_beans",
+					"value": 0.2,
+					"min": 48,
+					"max": 96,
+					"tier": 0,
+					"note": "The biscuit tin is empty, and the town has noticed."
+				},
+				{
+					"item": "minecraft:honey_bottle",
+					"value": 1.0,
+					"min": 8,
+					"max": 16,
+					"tier": 0,
+					"note": "Honey cakes for the mayor's birthday."
+				}
+			],
+			"prizes": [
+				{
+					"item": "minecraft:golden_carrot",
+					"value": 0.4,
+					"max": 64,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:glistering_melon_slice",
+					"value": 1.0,
+					"max": 32,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:golden_apple",
+					"value": 6,
+					"max": 4,
+					"tier": 0
+				},
+				{
+					"item": "minecraft:enchanted_golden_apple",
+					"value": 60,
+					"max": 1,
+					"tier": 3
+				}
+			]
+		}
+	],
+	"watch": {
+		"id": "watch",
+		"roles": [
+			"Watch Captain",
+			"Sergeant of the Watch"
+		],
+		"bounties": [
+			{
+				"entity": "minecraft:zombie",
+				"value": 0.4,
+				"min": 20,
+				"max": 40,
+				"tier": 0,
+				"note": "They keep trying the doors."
+			},
+			{
+				"entity": "minecraft:skeleton",
+				"value": 0.5,
+				"min": 16,
+				"max": 32,
+				"tier": 0,
+				"note": "Someone has to deal with the archers."
+			},
+			{
+				"entity": "minecraft:spider",
+				"value": 0.4,
+				"min": 16,
+				"max": 32,
+				"tier": 0,
+				"note": "The washing lines are full of webs."
+			},
+			{
+				"entity": "minecraft:creeper",
+				"value": 0.8,
+				"min": 12,
+				"max": 24,
+				"tier": 0,
+				"note": "The bakery has lost its third wall this month."
+			},
+			{
+				"entity": "minecraft:drowned",
+				"value": 0.6,
+				"min": 12,
+				"max": 24,
+				"tier": 0,
+				"note": "The harbour is not safe after dark."
+			},
+			{
+				"entity": "minecraft:slime",
+				"value": 0.5,
+				"min": 16,
+				"max": 32,
+				"tier": 0,
+				"note": "The swamp road is sticky again."
+			},
+			{
+				"entity": "minecraft:witch",
+				"value": 2.5,
+				"min": 3,
+				"max": 6,
+				"tier": 1,
+				"note": "Strange potions have been thrown at the farmers."
+			},
+			{
+				"entity": "minecraft:enderman",
+				"value": 1.5,
+				"min": 8,
+				"max": 16,
+				"tier": 1,
+				"note": "Somebody's front wall has gone missing, block by block."
+			},
+			{
+				"entity": "minecraft:pillager",
+				"value": 1.5,
+				"min": 8,
+				"max": 16,
+				"tier": 1,
+				"note": "Patrols have been seen on the hill."
+			},
+			{
+				"entity": "minecraft:phantom",
+				"value": 1.5,
+				"min": 6,
+				"max": 12,
+				"tier": 1,
+				"note": "Nobody in town has slept properly in days."
+			},
+			{
+				"entity": "minecraft:breeze",
+				"value": 3,
+				"min": 4,
+				"max": 8,
+				"tier": 1,
+				"note": "Something in the old trial chambers is blowing the doors off."
+			},
+			{
+				"entity": "minecraft:guardian",
+				"value": 1.5,
+				"min": 8,
+				"max": 16,
+				"tier": 1,
+				"note": "The monument's guards are scaring off the fishermen."
+			},
+			{
+				"entity": "minecraft:ravager",
+				"value": 8,
+				"min": 1,
+				"max": 2,
+				"tier": 1,
+				"note": "The beast that flattened the market stalls."
+			},
+			{
+				"entity": "minecraft:evoker",
+				"value": 10,
+				"min": 1,
+				"max": 2,
+				"tier": 1,
+				"note": "A mansion's master is sending fangs into the fields."
+			},
+			{
+				"entity": "minecraft:blaze",
+				"value": 2,
+				"min": 10,
+				"max": 20,
+				"tier": 2,
+				"note": "The alchemists need their rods."
+			},
+			{
+				"entity": "minecraft:magma_cube",
+				"value": 0.8,
+				"min": 12,
+				"max": 24,
+				"tier": 2,
+				"note": "Reports of bouncing in the Nether."
+			},
+			{
+				"entity": "minecraft:wither_skeleton",
+				"value": 3,
+				"min": 5,
+				"max": 10,
+				"tier": 2,
+				"note": "A fortress that badly needs emptying."
+			},
+			{
+				"entity": "minecraft:ghast",
+				"value": 4,
+				"min": 3,
+				"max": 6,
+				"tier": 2,
+				"note": "The crying keeps everyone awake."
+			},
+			{
+				"entity": "minecraft:piglin_brute",
+				"value": 6,
+				"min": 1,
+				"max": 3,
+				"tier": 2,
+				"note": "The bastion's guards have grown bold."
+			},
+			{
+				"entity": "minecraft:shulker",
+				"value": 3,
+				"min": 6,
+				"max": 12,
+				"tier": 3,
+				"note": "Their boxes, it seems, are very useful."
+			}
+		],
+		"prizes": [
+			{
+				"item": "minecraft:enchanted_book",
+				"enchant": "minecraft:sharpness",
+				"level": 5,
+				"value": 18,
+				"max": 1,
+				"tier": 0
+			},
+			{
+				"item": "minecraft:enchanted_book",
+				"enchant": "minecraft:protection",
+				"level": 4,
+				"value": 18,
+				"max": 1,
+				"tier": 0
+			},
+			{
+				"item": "minecraft:enchanted_book",
+				"enchant": "minecraft:looting",
+				"level": 3,
+				"value": 18,
+				"max": 1,
+				"tier": 0
+			},
+			{
+				"item": "minecraft:enchanted_book",
+				"enchant": "minecraft:smite",
+				"level": 5,
+				"value": 12,
+				"max": 1,
+				"tier": 0
+			},
+			{
+				"item": "minecraft:golden_apple",
+				"value": 6,
+				"max": 4,
+				"tier": 0
+			},
+			{
+				"item": "minecraft:diamond_sword",
+				"value": 6,
+				"max": 1,
+				"tier": 1
+			},
+			{
+				"item": "minecraft:totem_of_undying",
+				"value": 30,
+				"max": 1,
+				"tier": 2
+			},
+			{
+				"item": "minecraft:enchanted_golden_apple",
+				"value": 60,
+				"max": 1,
+				"tier": 3
+			}
+		]
+	}
+}

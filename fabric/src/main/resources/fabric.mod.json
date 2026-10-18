@@ -1,30 +1,33 @@
 {
 	"schemaVersion": 1,
-	"id": "spacebod_herald",
+	"id": "spacebod_observer",
 	"version": "${version}",
-	"name": "Herald",
-	"description": "A weekly newspaper about your world's players, written from what actually happened and delivered by a delivery dog. Optionally written by a small AI model that runs on your own computer.",
+	"name": "The Observer",
+	"description": "The AI newspaper for your Minecraft world: every week a language model on your own computer writes up what your world's players actually did, and the Pawstman delivers it to your door.",
 	"authors": [
 		"SpaceBod"
 	],
 	"contact": {
-		"homepage": "https://github.com/SpaceBod/herald",
-		"sources": "https://github.com/SpaceBod/herald",
-		"issues": "https://github.com/SpaceBod/herald/issues"
+		"homepage": "https://github.com/SpaceBod/the-observer",
+		"sources": "https://github.com/SpaceBod/the-observer",
+		"issues": "https://github.com/SpaceBod/the-observer/issues"
 	},
 	"license": "MIT",
-	"icon": "assets/spacebod_herald/icon.png",
+	"icon": "assets/spacebod_observer/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.spacebod.herald.fabric.HeraldFabric"
+			"dev.spacebod.observer.fabric.ObserverFabric"
 		],
 		"client": [
-			"dev.spacebod.herald.fabric.client.HeraldFabricClient"
+			"dev.spacebod.observer.fabric.client.ObserverFabricClient"
+		],
+		"modmenu": [
+			"dev.spacebod.observer.fabric.client.ObserverModMenu"
 		]
 	},
 	"mixins": [
-		"spacebod_herald.mixins.json"
+		"spacebod_observer.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.5",

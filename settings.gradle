@@ -9,8 +9,8 @@ pluginManagement {
 	}
 }
 
-rootProject.name = 'herald'
+rootProject.name = 'observer'
 
 include('common')   // loader-agnostic code, compiled into both jars
-include('fabric')   // -> build/libs/herald-<version>+mc<series>-fabric.jar
-include('neoforge') // -> build/libs/herald-<version>+mc<series>-neoforge.jar
+include('fabric')   // -> build/libs/observer-<version>+mc<series>-fabric.jar
+include('neoforge') // -> build/libs/observer-<version>+mc<series>-neoforge.jar

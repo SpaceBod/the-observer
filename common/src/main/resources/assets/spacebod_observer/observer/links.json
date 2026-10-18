@@ -1,0 +1,105 @@
+{
+	"_comment": "Connections between a player's deaths and the rest of their week. Each rule matches a death by the game's death message key (the key itself, or anything under it: 'death.fell' matches 'death.fell.accident.ladder') and needs evidence from the same edition: an advancement earned (by id) or a statistic over a minimum. The first rule that matches a death wins. 'how' finishes both 'On day 14, they ...' and 'On day 14, Steve ...'; 'says' finishes 'Steve ...', with {{n}} the statistic divided by 'divide' and {{s}} an s unless it is 1. 'bonus' is added to the score of the stories the connection joins.",
+	"rules": [
+		{
+			"id": "gliding",
+			"deaths": ["death.attack.flyIntoWall"],
+			"advancements": ["minecraft:end/elytra"],
+			"stats": [
+				{"stat": "custom:aviate_one_cm", "min": 10000, "divide": 100, "says": "flew {{n}} blocks by elytra this week"}
+			],
+			"how": "crashed while gliding",
+			"bonus": 30
+		},
+		{
+			"id": "fireworks",
+			"deaths": ["death.attack.fireworks"],
+			"advancements": ["minecraft:end/elytra"],
+			"stats": [
+				{"stat": "crafted:firework_rocket", "min": 1, "divide": 1, "says": "crafted {{n}} firework rocket{{s}} this week"},
+				{"stat": "custom:aviate_one_cm", "min": 10000, "divide": 100, "says": "flew {{n}} blocks by elytra this week"}
+			],
+			"how": "got caught in a firework blast",
+			"bonus": 25
+		},
+		{
+			"id": "cliffs",
+			"deaths": ["death.fell", "death.attack.fall"],
+			"advancements": ["minecraft:adventure/fall_from_world_height"],
+			"stats": [],
+			"how": "died from a fall",
+			"bonus": 28
+		},
+		{
+			"id": "falling_flyer",
+			"deaths": ["death.fell", "death.attack.fall"],
+			"advancements": ["minecraft:end/elytra"],
+			"stats": [
+				{"stat": "custom:aviate_one_cm", "min": 10000, "divide": 100, "says": "flew {{n}} blocks by elytra this week"}
+			],
+			"how": "died from a fall",
+			"bonus": 22
+		},
+		{
+			"id": "lava",
+			"deaths": ["death.attack.lava"],
+			"advancements": ["minecraft:story/lava_bucket", "minecraft:nether/obtain_ancient_debris", "minecraft:story/mine_diamond", "minecraft:story/enter_the_nether"],
+			"stats": [
+				{"stat": "mined:ancient_debris", "min": 1, "divide": 1, "says": "mined {{n}} ancient debris this week"},
+				{"stat": "mined:deepslate_diamond_ore", "min": 1, "divide": 1, "says": "mined {{n}} deepslate diamond ore this week"},
+				{"stat": "mined:diamond_ore", "min": 1, "divide": 1, "says": "mined {{n}} diamond ore this week"}
+			],
+			"how": "came to grief in lava",
+			"bonus": 22
+		},
+		{
+			"id": "fire",
+			"deaths": ["death.attack.inFire", "death.attack.onFire", "death.attack.hotFloor"],
+			"advancements": ["minecraft:story/enter_the_nether", "minecraft:nether/explore_nether"],
+			"stats": [],
+			"how": "met a fiery end",
+			"bonus": 15
+		},
+		{
+			"id": "water",
+			"deaths": ["death.attack.drown"],
+			"advancements": ["minecraft:husbandry/fishy_business", "minecraft:husbandry/tactical_fishing", "minecraft:adventure/salvage_sherd"],
+			"stats": [
+				{"stat": "custom:fish_caught", "min": 5, "divide": 1, "says": "caught {{n}} fish this week"},
+				{"stat": "custom:swim_one_cm", "min": 50000, "divide": 100, "says": "swam {{n}} blocks this week"}
+			],
+			"how": "drowned",
+			"bonus": 18
+		},
+		{
+			"id": "explosives",
+			"deaths": ["death.attack.explosion"],
+			"advancements": [],
+			"stats": [
+				{"stat": "placed:tnt", "min": 1, "divide": 1, "says": "set down {{n}} TNT this week"},
+				{"stat": "crafted:tnt", "min": 1, "divide": 1, "says": "crafted {{n}} TNT this week"}
+			],
+			"how": "got caught in an explosion",
+			"bonus": 25
+		},
+		{
+			"id": "anvil",
+			"deaths": ["death.attack.anvil"],
+			"advancements": [],
+			"stats": [
+				{"stat": "crafted:anvil", "min": 1, "divide": 1, "says": "crafted {{n}} anvil{{s}} this week"}
+			],
+			"how": "got flattened by an anvil",
+			"bonus": 25
+		}
+	],
+	"rivals": {
+		"_comment": "A creature that killed the player and that they also defeated at least 'min' of this edition.",
+		"min": 8,
+		"bonus": 18
+	},
+	"sameDay": {
+		"_comment": "A death on the day of an advancement that no rule above already joined it to.",
+		"bonus": 10
+	}
+}

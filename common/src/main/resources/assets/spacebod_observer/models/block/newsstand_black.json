@@ -1,0 +1,9 @@
+{
+	"parent": "spacebod_observer:block/newsstand",
+	"textures": {
+		"particle": "spacebod_observer:block/newsstand_side_black",
+		"side": "spacebod_observer:block/newsstand_side_black",
+		"top": "spacebod_observer:block/newsstand_top_black",
+		"front": "spacebod_observer:block/newsstand_front_black"
+	}
+}

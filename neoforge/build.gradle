@@ -11,3 +11,16 @@ dependencies {
 	jarJar "com.fasterxml.jackson.core:jackson-core:${project.jackson_version}"
 	jarJar "com.fasterxml.jackson.core:jackson-annotations:${project.jackson_annotations_version}"
 }
+
+// Dev client only: the same player every run, so the world remembers them.
+neoForge {
+	runs {
+		client {
+			programArguments.addAll('--username', 'Reader')
+			// -Pworld=<name>: straight into that singleplayer world.
+			if (project.hasProperty('world')) {
+				programArguments.addAll('--quickPlaySingleplayer', project.property('world'))
+			}
+		}
+	}
+}

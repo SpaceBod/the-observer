@@ -12,7 +12,7 @@ logs/
 # Writing models: large downloads, never committed
 *.gguf
 *.gguf.part
-herald-models/
+observer-models/
 
 # Built release jars (attached to GitHub Releases instead)
 releases/
@@ -33,6 +33,9 @@ releases/
 bin/
 .factorypath
 *.launch
+
+# Full-size screenshots; docs/images holds the compressed copies
+docs/images/originals/
 
 # Local tooling
 .claude/

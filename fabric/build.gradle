@@ -12,12 +12,17 @@ dependencies {
 	include "com.fasterxml.jackson.core:jackson-annotations:${project.jackson_annotations_version}"
 }
 
-// Dev client only: a fixed 16 GB heap.
+// Dev client only: a fixed 16 GB heap, and the same player every run, so the world remembers them.
 loom {
 	runs {
 		client {
 			vmArg '-Xms16G'
 			vmArg '-Xmx16G'
+			programArgs '--username', 'Reader'
+			// -Pworld=<name>: straight into that singleplayer world.
+			if (project.hasProperty('world')) {
+				programArgs '--quickPlaySingleplayer', project.property('world')
+			}
 		}
 	}
 }

@@ -1,0 +1,36 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_paper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:paper"
+					}
+				]
+			}
+		},
+		"has_newspaper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "spacebod_observer:newspaper"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_paper",
+			"has_newspaper"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"spacebod_observer:newsstand"
+		]
+	}
+}

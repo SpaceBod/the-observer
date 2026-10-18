@@ -6,17 +6,47 @@
 // as a library jar (jar-in-jar on both loaders), so other mods shipping Jackson resolve to one copy.
 configurations {
 	llama { transitive = false }
+	llamaGpu { transitive = false }
 }
 
 def keptNatives = ['Windows/x86_64', 'Windows/aarch64', 'Linux/x86_64', 'Linux/aarch64', 'Mac/aarch64']
 
 dependencies {
 	llama "net.ladenthin:llama:${project.llama_version}"
+	llamaGpu "net.ladenthin:llama:${project.llama_version}:vulkan-windows-x86-64"
+	llamaGpu "net.ladenthin:llama:${project.llama_version}:vulkan-linux-x86-64"
 	compileOnly("net.ladenthin:llama:${project.llama_version}") { transitive = false }
 	implementation "com.fasterxml.jackson.core:jackson-databind:${project.jackson_version}"
 }
 
+// The GPU (Vulkan) builds for Windows and Linux x64, as a "vulkan" backend next to each platform's CPU
+// library: net/ladenthin/llama/<os>/<arch>/vulkan/. The press loads it when the GPU is chosen, and the CPU
+// library when it can't (no Vulkan driver) or the CPU is chosen.
+def gpuNatives = tasks.register('gpuNatives', Jar) {
+	archiveFileName = 'llama-gpu-natives.jar'
+	destinationDirectory = layout.buildDirectory.dir('gpu-natives')
+	inputs.files(configurations.llamaGpu)
+	from({ configurations.llamaGpu.collect { zipTree(it) } }) {
+		include '**/*.dll', '**/*.so'
+		eachFile { it.path = it.path.substring(0, it.path.lastIndexOf('/')) + '/vulkan/' + it.name }
+	}
+	includeEmptyDirs = false
+}
+
+dependencies {
+	// Dev runs see the GPU backend the same way the release jar carries it.
+	if (project.configurations.findByName('localRuntime') != null) {
+		localRuntime files(gpuNatives)
+	} else {
+		runtimeOnly files(gpuNatives)
+	}
+}
+
 tasks.named('jar', Jar) {
+	dependsOn gpuNatives
+	from({ zipTree(gpuNatives.get().archiveFile) }) {
+		include 'net/**'
+	}
 	inputs.files(configurations.llama)
 	from({ configurations.llama.collect { zipTree(it) } }) {
 		exclude 'module-info.class', 'META-INF/**'

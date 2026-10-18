@@ -14,7 +14,7 @@ sourceSets.named('main') {
 	resources.srcDir "src/versions/${mcSeries}/main/resources"
 }
 
-// Mods that should be on the dev-run classpath but are never a real dependency (e.g. Cloth Config).
+// Libraries that should be on the dev-run classpath but are never a real dependency (e.g. the llama.cpp binding).
 configurations {
 	localRuntime
 	runtimeClasspath.extendsFrom localRuntime
@@ -64,9 +64,6 @@ dependencies {
 		capabilities { requireFeature('client') }
 	}
 
-	// Optional: config screen in NeoForge's own Mods list, built with Cloth Config. Not required at runtime.
-	compileOnly "me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}"
-	localRuntime "me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}"
 }
 
 tasks.named('compileJava', JavaCompile) { source(commonSrc('main', 'java') + commonSrc('client', 'java')) }
@@ -81,11 +78,15 @@ processResources {
 	// Maven-style ranges. NeoForge builds are tied to one Minecraft version anyway, so the neoforge range
 	// just has to span the series: "[26.3,26.4)".
 	def minecraftRange = "[${mcSeries},${mcNextSeries})"
+	// The mods list's square icon: `iconFile` from 26.2, where `logoFile` became a deprecated banner; 26.1 only has `logoFile`.
+	def (major, minor) = mcSeries.tokenize('.').collect { it as int }
+	def iconKey = major > 26 || minor > 1 ? 'icon' : 'logo'
 	inputs.property 'version', version
 	inputs.property 'minecraftRange', minecraftRange
+	inputs.property 'iconKey', iconKey
 
 	filesMatching('META-INF/neoforge.mods.toml') {
-		expand 'version': version, 'minecraft_range': minecraftRange
+		expand 'version': version, 'minecraft_range': minecraftRange, 'icon': iconKey
 	}
 }
 
