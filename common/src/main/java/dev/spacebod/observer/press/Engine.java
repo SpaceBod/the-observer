@@ -4,6 +4,7 @@ import dev.spacebod.observer.Observer;
 import net.ladenthin.llama.loader.LlamaLoader;
 
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
@@ -46,7 +47,9 @@ final class Engine {
 
 	/**
 	 * Unpacks the native library into a folder of this game's own, so games running side by side don't overwrite
-	 * each other's copy, and clears out the folders of games that have since closed.
+	 * each other's copy, and clears out the folders of games that have since closed. If that folder can't be made,
+	 * the press doesn't run the model (the edition prints from house templates) rather than unpack into the
+	 * shared temp folder.
 	 */
 	private static void ownTempDir() {
 		Path root = Path.of(System.getProperty("java.io.tmpdir"), "observer-llama");
@@ -58,7 +61,7 @@ final class Engine {
 			Path mine = Files.createDirectories(root.resolve(Long.toString(ProcessHandle.current().pid())));
 			System.setProperty(TEMP_DIR, mine.toString());
 		} catch (IOException e) {
-			Observer.LOGGER.debug("Unpacking the press to the shared temp folder: {}", e.getMessage());
+			throw new UncheckedIOException("No folder of its own to unpack the press into (" + root + ")", e);
 		}
 	}
 
