@@ -50,6 +50,9 @@ tasks.named('jar', Jar) {
 	inputs.files(configurations.llama)
 	from({ configurations.llama.collect { zipTree(it) } }) {
 		exclude 'module-info.class', 'META-INF/**'
+		// The mod ships its own LlamaLoader (common/src/main/java/net/ladenthin/llama/loader), the same
+		// class without the upstream temp-folder cleanup, so the upstream one stays out of the jar.
+		exclude 'net/ladenthin/llama/loader/LlamaLoader.class', 'net/ladenthin/llama/loader/LlamaLoader$*.class'
 		exclude { FileTreeElement e ->
 			def path = e.relativePath.pathString
 			path ==~ /net\/ladenthin\/llama\/[^\/]+\/[^\/]+\/[^\/]+\.(so|dll|dylib)/ &&
